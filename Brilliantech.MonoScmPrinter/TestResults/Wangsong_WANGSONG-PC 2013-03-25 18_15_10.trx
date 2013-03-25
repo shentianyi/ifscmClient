@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="cdeaf806-29f8-4089-9824-f32e3f218a24" name="Wangsong@WANGSONG-PC 2013-03-25 18:15:10" runUser="Wangsong-PC\Wangsong" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="5a90e3fc-bbcb-4d58-a74b-d117d43c1917">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Wangsong_WANGSONG-PC 2013-03-25 18_15_10">
+      <DeploymentItem filename="D:\File\DLL\ICSharpCode.SharpZipLib.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.BaseCL\bin\Debug\Brilliantech.MonoScmPrinter.BaseCL.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.ReportGenConnector\bin\Debug\Brilliantech.ReportGenConnector.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.ClientCL\bin\Debug\Brilliantech.MonoScmPrinter.ClientCL.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.Service\bin\Debug\MonoScmPrinterService.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-03-25T18:15:10.1698000+08:00" queuing="2013-03-25T18:15:10.2198000+08:00" start="2013-03-25T18:15:10.2508000+08:00" finish="2013-03-25T18:15:11.4568000+08:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="DnArriveTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\ifscmclient\brilliantech.monoscmprinter\brilliantech.monoscmprinter.testproject\bin\debug\brilliantech.monoscmprinter.testproject.dll" id="b7d09e14-27d0-9def-7015-1696ad3fe075">
+      <Execution id="7e870756-4a45-4efc-b7fd-bf7bd27c582d" />
+      <TestMethod codeBase="C:/Users/Wangsong/Documents/Visual Studio 2010/Projects/ifscmClient/Brilliantech.MonoScmPrinter/Brilliantech.MonoScmPrinter.TestProject/bin/Debug/Brilliantech.MonoScmPrinter.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest, Brilliantech.MonoScmPrinter.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DnArriveTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b7d09e14-27d0-9def-7015-1696ad3fe075" executionId="7e870756-4a45-4efc-b7fd-bf7bd27c582d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="7e870756-4a45-4efc-b7fd-bf7bd27c582d" testId="b7d09e14-27d0-9def-7015-1696ad3fe075" testName="DnArriveTest" computerName="WANGSONG-PC" duration="00:00:00.8739534" startTime="2013-03-25T18:15:10.2678000+08:00" endTime="2013-03-25T18:15:11.3698000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e870756-4a45-4efc-b7fd-bf7bd27c582d">
+      <Output>
+        <TextMessages>
+          <Message>此运单无权限查看</Message>
+        </TextMessages>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
