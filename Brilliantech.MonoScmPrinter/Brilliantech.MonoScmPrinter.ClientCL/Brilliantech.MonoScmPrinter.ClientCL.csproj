@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42648512-7C0E-4D0D-98ED-A771ACAB48C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Brilliantech.MonoScmPrinter.ClientCL</RootNamespace>
+    <AssemblyName>Brilliantech.MonoScmPrinter.ClientCL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TECIT.TFORMer, Version=6.0.3.0, Culture=neutral, PublicKeyToken=1b5f4306b234b83d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\File\DLL\TECIT.TFORMer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseConfig.cs" />
+    <Compile Include="CusExceptions\TemplateMissingException.cs" />
+    <Compile Include="CusExceptions\RestHostMissingException.cs" />
+    <Compile Include="Enums\MsgLevel.cs" />
+    <Compile Include="IRestApis\IGenPrinter.cs" />
+    <Compile Include="IRestApis\IRestAuther.cs" />
+    <Compile Include="IRestApis\IRestDelivery.cs" />
+    <Compile Include="IRestApis\IRestFile.cs" />
+    <Compile Include="Model\DeliveryBase.cs" />
+    <Compile Include="Model\DeliveryItem.cs" />
+    <Compile Include="Model\DeliveryNote.cs" />
+    <Compile Include="Model\DeliveryPackage.cs" />
+    <Compile Include="Model\PrintData.cs" />
+    <Compile Include="Model\EnumItem.cs" />
+    <Compile Include="ParameterHelper.cs" />
+    <Compile Include="PrinterConfig.cs" />
+    <Compile Include="Model\LoginInfo.cs" />
+    <Compile Include="Model\ReturnMsg.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestApis\GenPrinter.cs" />
+    <Compile Include="RestApis\RestAuther.cs" />
+    <Compile Include="RestApis\RestDelivery.cs" />
+    <Compile Include="RestApis\RestFile.cs" />
+    <Compile Include="RestRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Brilliantech.MonoScmPrinter.BaseCL\Brilliantech.MonoScmPrinter.BaseCL.csproj">
+      <Project>{4DAF2FA8-28AB-4952-86A2-29A9EC5AA360}</Project>
+      <Name>Brilliantech.MonoScmPrinter.BaseCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Brilliantech.ReportGenConnector\Brilliantech.ReportGenConnector.csproj">
+      <Project>{DE39BCC6-CCDA-459D-B0F1-301BD1C009B3}</Project>
+      <Name>Brilliantech.ReportGenConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

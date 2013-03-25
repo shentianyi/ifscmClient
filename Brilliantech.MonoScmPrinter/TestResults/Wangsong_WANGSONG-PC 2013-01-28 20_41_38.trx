@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8d2452c9-beb4-4171-8af1-51770937819b" name="Wangsong@WANGSONG-PC 2013-01-28 20:41:38" runUser="Wangsong-PC\Wangsong" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="5a90e3fc-bbcb-4d58-a74b-d117d43c1917">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Wangsong_WANGSONG-PC 2013-01-28 20_41_38">
+      <DeploymentItem filename="D:\File\DLL\ICSharpCode.SharpZipLib.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.Service\bin\Debug\MonoScmPrinterService.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.ClientCL\bin\Debug\Brilliantech.MonoScmPrinter.ClientCL.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.BaseCL\bin\Debug\Brilliantech.MonoScmPrinter.BaseCL.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.ReportGenConnector\bin\Debug\Brilliantech.ReportGenConnector.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-28T20:41:38.4470000+08:00" queuing="2013-01-28T20:41:38.8180000+08:00" start="2013-01-28T20:41:40.3700000+08:00" finish="2013-01-28T20:41:44.6680000+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="RemoveFromPrintQueueTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\brilliantech.monoscmprinter\brilliantech.monoscmprinter.testproject\bin\debug\brilliantech.monoscmprinter.testproject.dll" id="4522ee62-fbac-b371-982f-960f1590bc0f">
+      <Execution id="e5e4ad51-50a3-4269-97e4-e7a7caace192" />
+      <TestMethod codeBase="C:/Users/Wangsong/documents/visual studio 2010/Projects/Brilliantech.MonoScmPrinter/Brilliantech.MonoScmPrinter.TestProject/bin/Debug/Brilliantech.MonoScmPrinter.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest, Brilliantech.MonoScmPrinter.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RemoveFromPrintQueueTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="4522ee62-fbac-b371-982f-960f1590bc0f" executionId="e5e4ad51-50a3-4269-97e4-e7a7caace192" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e5e4ad51-50a3-4269-97e4-e7a7caace192" testId="4522ee62-fbac-b371-982f-960f1590bc0f" testName="RemoveFromPrintQueueTest" computerName="WANGSONG-PC" duration="00:00:00.6652731" startTime="2013-01-28T20:41:40.8710000+08:00" endTime="2013-01-28T20:41:44.4010000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e5e4ad51-50a3-4269-97e4-e7a7caace192">
+      <Output>
+        <ErrorInfo>
+          <Message>测试方法 Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest.RemoveFromPrintQueueTest 引发了异常: 
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。</Message>
+          <StackTrace>    在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 System.Net.WebRequest.Create(String requestUriString)
+   在 Brilliantech.MonoScmPrinter.ClientCL.RestRequest.CreateWebRequest(String endpoint, String method, Int32 content_length) 位置 C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.ClientCL\RestRequest.cs:行号 16
+   在 Brilliantech.MonoScmPrinter.ClientCL.RestApis.RestDelivery.RemoveFromPrintQueue(String dnKey) 位置 C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.ClientCL\RestApis\RestDelivery.cs:行号 27
+   在 Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest.RemoveFromPrintQueueTest() 位置 C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.TestProject\RestDeliveryTest.cs:行号 93
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

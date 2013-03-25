@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="b81c6d6a-e5e4-4d72-8c61-b78f6eb57c7c" name="Wangsong@WANGSONG-PC 2013-01-28 09:35:12" runUser="Wangsong-PC\Wangsong" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="5a90e3fc-bbcb-4d58-a74b-d117d43c1917">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Wangsong_WANGSONG-PC 2013-01-28 09_35_12">
+      <DeploymentItem filename="D:\File\DLL\ICSharpCode.SharpZipLib.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.Service\bin\Debug\MonoScmPrinterService.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.ClientCL\bin\Debug\Brilliantech.MonoScmPrinter.ClientCL.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.BaseCL\bin\Debug\Brilliantech.MonoScmPrinter.BaseCL.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.ReportGenConnector\bin\Debug\Brilliantech.ReportGenConnector.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-28T09:35:12.9700000+08:00" queuing="2013-01-28T09:35:13.1470000+08:00" start="2013-01-28T09:35:13.1590000+08:00" finish="2013-01-28T09:35:20.1870000+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="5" executed="5" passed="2" error="0" failed="3" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="DnPackageListTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\brilliantech.monoscmprinter\brilliantech.monoscmprinter.testproject\bin\debug\brilliantech.monoscmprinter.testproject.dll" id="9e19f2cb-56cb-46d1-725e-4510e488e06a">
+      <Execution id="c5afc23b-9b25-4b6d-9b14-f825c7bd8894" />
+      <TestMethod codeBase="C:/Users/Wangsong/documents/visual studio 2010/Projects/Brilliantech.MonoScmPrinter/Brilliantech.MonoScmPrinter.TestProject/bin/Debug/Brilliantech.MonoScmPrinter.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest, Brilliantech.MonoScmPrinter.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DnPackageListTest" />
+    </UnitTest>
+    <UnitTest name="RemoveFromPrintQueueTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\brilliantech.monoscmprinter\brilliantech.monoscmprinter.testproject\bin\debug\brilliantech.monoscmprinter.testproject.dll" id="4522ee62-fbac-b371-982f-960f1590bc0f">
+      <Execution id="c3b0a037-1178-43a0-b9b9-2499706b7072" />
+      <TestMethod codeBase="C:/Users/Wangsong/documents/visual studio 2010/Projects/Brilliantech.MonoScmPrinter/Brilliantech.MonoScmPrinter.TestProject/bin/Debug/Brilliantech.MonoScmPrinter.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest, Brilliantech.MonoScmPrinter.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RemoveFromPrintQueueTest" />
+    </UnitTest>
+    <UnitTest name="DnListTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\brilliantech.monoscmprinter\brilliantech.monoscmprinter.testproject\bin\debug\brilliantech.monoscmprinter.testproject.dll" id="192c89af-eaeb-965d-0478-55bb2fedb94a">
+      <Execution id="79613945-14c1-4d51-8097-9f1f1d0d988a" />
+      <TestMethod codeBase="C:/Users/Wangsong/documents/visual studio 2010/Projects/Brilliantech.MonoScmPrinter/Brilliantech.MonoScmPrinter.TestProject/bin/Debug/Brilliantech.MonoScmPrinter.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest, Brilliantech.MonoScmPrinter.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DnListTest" />
+    </UnitTest>
+    <UnitTest name="DnItemListTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\brilliantech.monoscmprinter\brilliantech.monoscmprinter.testproject\bin\debug\brilliantech.monoscmprinter.testproject.dll" id="b655dde2-f5de-8564-fbdd-f1ad9ea54a7a">
+      <Execution id="c73c8ca5-ed38-4e0a-a4f9-5fc808192f6d" />
+      <TestMethod codeBase="C:/Users/Wangsong/documents/visual studio 2010/Projects/Brilliantech.MonoScmPrinter/Brilliantech.MonoScmPrinter.TestProject/bin/Debug/Brilliantech.MonoScmPrinter.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest, Brilliantech.MonoScmPrinter.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DnItemListTest" />
+    </UnitTest>
+    <UnitTest name="DnItemPrintDataTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\brilliantech.monoscmprinter\brilliantech.monoscmprinter.testproject\bin\debug\brilliantech.monoscmprinter.testproject.dll" id="c99ca6c9-5407-62f0-6dbf-e9f1516daf66">
+      <Execution id="a1884d51-ca98-4516-a2b8-32bcba371053" />
+      <TestMethod codeBase="C:/Users/Wangsong/documents/visual studio 2010/Projects/Brilliantech.MonoScmPrinter/Brilliantech.MonoScmPrinter.TestProject/bin/Debug/Brilliantech.MonoScmPrinter.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest, Brilliantech.MonoScmPrinter.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DnItemPrintDataTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="192c89af-eaeb-965d-0478-55bb2fedb94a" executionId="79613945-14c1-4d51-8097-9f1f1d0d988a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4522ee62-fbac-b371-982f-960f1590bc0f" executionId="c3b0a037-1178-43a0-b9b9-2499706b7072" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e19f2cb-56cb-46d1-725e-4510e488e06a" executionId="c5afc23b-9b25-4b6d-9b14-f825c7bd8894" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b655dde2-f5de-8564-fbdd-f1ad9ea54a7a" executionId="c73c8ca5-ed38-4e0a-a4f9-5fc808192f6d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c99ca6c9-5407-62f0-6dbf-e9f1516daf66" executionId="a1884d51-ca98-4516-a2b8-32bcba371053" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="79613945-14c1-4d51-8097-9f1f1d0d988a" testId="192c89af-eaeb-965d-0478-55bb2fedb94a" testName="DnListTest" computerName="WANGSONG-PC" duration="00:00:05.6841202" startTime="2013-01-28T09:35:13.2090000+08:00" endTime="2013-01-28T09:35:19.1110000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79613945-14c1-4d51-8097-9f1f1d0d988a">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;1&gt;，实际为: &lt;3&gt;。</Message>
+          <StackTrace>   在 Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest.DnListTest() 位置 C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.TestProject\RestDeliveryTest.cs:行号 81
+</StackTrace>
+        </ErrorInfo>
+        <TextMessages>
+          <Message>DN20130127194723</Message>
+          <Message>DN20130127203524</Message>
+          <Message>DN20130127223025</Message>
+        </TextMessages>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c3b0a037-1178-43a0-b9b9-2499706b7072" testId="4522ee62-fbac-b371-982f-960f1590bc0f" testName="RemoveFromPrintQueueTest" computerName="WANGSONG-PC" duration="00:00:00.0561529" startTime="2013-01-28T09:35:19.1290000+08:00" endTime="2013-01-28T09:35:19.1910000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3b0a037-1178-43a0-b9b9-2499706b7072">
+      <Output>
+        <ErrorInfo>
+          <Message>测试方法 Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest.RemoveFromPrintQueueTest 引发了异常: 
+System.UriFormatException: 无效的 URI: 未能确定 URI 的格式。</Message>
+          <StackTrace>    在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 System.Net.WebRequest.Create(String requestUriString)
+   在 Brilliantech.MonoScmPrinter.ClientCL.RestRequest.CreateWebRequest(String endpoint, String method, Int32 content_length) 位置 C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.ClientCL\RestRequest.cs:行号 16
+   在 Brilliantech.MonoScmPrinter.ClientCL.RestApis.RestDelivery.RemoveFromPrintQueue(String dnKey) 位置 C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.ClientCL\RestApis\RestDelivery.cs:行号 27
+   在 Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest.RemoveFromPrintQueueTest() 位置 C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.TestProject\RestDeliveryTest.cs:行号 93
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c5afc23b-9b25-4b6d-9b14-f825c7bd8894" testId="9e19f2cb-56cb-46d1-725e-4510e488e06a" testName="DnPackageListTest" computerName="WANGSONG-PC" duration="00:00:00.4528499" startTime="2013-01-28T09:35:19.1940000+08:00" endTime="2013-01-28T09:35:19.6580000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5afc23b-9b25-4b6d-9b14-f825c7bd8894">
+    </UnitTestResult>
+    <UnitTestResult executionId="c73c8ca5-ed38-4e0a-a4f9-5fc808192f6d" testId="b655dde2-f5de-8564-fbdd-f1ad9ea54a7a" testName="DnItemListTest" computerName="WANGSONG-PC" duration="00:00:00.2841706" startTime="2013-01-28T09:35:19.6600000+08:00" endTime="2013-01-28T09:35:19.9510000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c73c8ca5-ed38-4e0a-a4f9-5fc808192f6d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;3&gt;，实际为: &lt;6&gt;。</Message>
+          <StackTrace>   在 Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest.DnItemListTest() 位置 C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.TestProject\RestDeliveryTest.cs:行号 120
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a1884d51-ca98-4516-a2b8-32bcba371053" testId="c99ca6c9-5407-62f0-6dbf-e9f1516daf66" testName="DnItemPrintDataTest" computerName="WANGSONG-PC" duration="00:00:00.1948652" startTime="2013-01-28T09:35:19.9540000+08:00" endTime="2013-01-28T09:35:20.1600000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a1884d51-ca98-4516-a2b8-32bcba371053">
+    </UnitTestResult>
+  </Results>
+</TestRun>

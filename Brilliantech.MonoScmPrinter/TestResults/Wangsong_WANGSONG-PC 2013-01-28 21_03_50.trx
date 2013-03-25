@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="36b7a349-8c34-4f1d-b5a3-78cf7747c3b0" name="Wangsong@WANGSONG-PC 2013-01-28 21:03:50" runUser="Wangsong-PC\Wangsong" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="5a90e3fc-bbcb-4d58-a74b-d117d43c1917">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment userDeploymentRoot="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="Wangsong_WANGSONG-PC 2013-01-28 21_03_50">
+      <DeploymentItem filename="D:\File\DLL\ICSharpCode.SharpZipLib.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.ClientCL\bin\Debug\Brilliantech.MonoScmPrinter.ClientCL.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.ReportGenConnector\bin\Debug\Brilliantech.ReportGenConnector.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.Service\bin\Debug\MonoScmPrinterService.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.BaseCL\bin\Debug\Brilliantech.MonoScmPrinter.BaseCL.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-28T21:03:50.2790000+08:00" queuing="2013-01-28T21:03:50.9750000+08:00" start="2013-01-28T21:03:51.1650000+08:00" finish="2013-01-28T21:03:59.2640000+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="PrintTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\brilliantech.monoscmprinter\brilliantech.monoscmprinter.testproject\bin\debug\brilliantech.monoscmprinter.testproject.dll" id="406a31a1-cd1c-6804-ea09-c3fa300d69ee">
+      <Execution id="dc38cf34-16a7-42b5-9e31-87d59db08217" />
+      <TestMethod codeBase="C:/Users/Wangsong/documents/visual studio 2010/Projects/Brilliantech.MonoScmPrinter/Brilliantech.MonoScmPrinter.TestProject/bin/Debug/Brilliantech.MonoScmPrinter.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Brilliantech.MonoScmPrinter.TestProject.GenPrinterTest, Brilliantech.MonoScmPrinter.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PrintTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="406a31a1-cd1c-6804-ea09-c3fa300d69ee" executionId="dc38cf34-16a7-42b5-9e31-87d59db08217" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="dc38cf34-16a7-42b5-9e31-87d59db08217" testId="406a31a1-cd1c-6804-ea09-c3fa300d69ee" testName="PrintTest" computerName="WANGSONG-PC" duration="00:00:07.2575412" startTime="2013-01-28T21:03:51.2700000+08:00" endTime="2013-01-28T21:03:59.1440000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dc38cf34-16a7-42b5-9e31-87d59db08217">
+      <Output>
+        <StdOut>------------
+Default
+------------
+------ Print Ex-------
+系统找不到指定的文件。 
+SetRepositoryName with name Template\Leoni_Nbtp_DPackTemplete.tff
+
+Void Print()
+   在 TECIT.TFORMer.Job.Print()
+   在 Brilliantech.ReportGenConnector.TecITGener.Print(RecordSet records, ReportGenConfig config) 位置 C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.ReportGenConnector\TecITGener.cs:行号 53</StdOut>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;True&gt;，实际为: &lt;False&gt;。</Message>
+          <StackTrace>   在 Brilliantech.MonoScmPrinter.TestProject.GenPrinterTest.PrintTest() 位置 C:\Users\Wangsong\documents\visual studio 2010\Projects\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.TestProject\GenPrinterTest.cs:行号 104
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
