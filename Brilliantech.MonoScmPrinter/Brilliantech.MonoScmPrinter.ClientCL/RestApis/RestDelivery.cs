@@ -26,12 +26,12 @@ namespace Brilliantech.MonoScmPrinter.ClientCL.RestApis
             return JSON.parse<ReturnMsg<string>>(RestRequest.GetResponse(req, bytes));
         }
 
-        public List<DeliveryPackage> DnPackageList(string dnKey)
-        {
-            byte[] bytes = ParameterHelper.generateDnSingleParameterByte(dnKey);
-            HttpWebRequest req = RestRequest.CreateWebRequest(BaseConfig.DnPackageListAction, RequestMethod.Post, bytes.Length);
-            return JSON.parse<List<DeliveryPackage>>(RestRequest.GetResponse(req, bytes));
-        }
+        //public List<DeliveryPackage> DnPackageList(string dnKey)
+        //{
+        //    byte[] bytes = ParameterHelper.generateDnSingleParameterByte(dnKey);
+        //    HttpWebRequest req = RestRequest.CreateWebRequest(BaseConfig.DnPackageListAction, RequestMethod.Post, bytes.Length);
+        //    return JSON.parse<List<DeliveryPackage>>(RestRequest.GetResponse(req, bytes));
+        //}
 
         public List<DeliveryItem> DnItemList(string dnKey)
         {
