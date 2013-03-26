@@ -134,11 +134,11 @@
                                     </VisualStateGroup>
                                 </VisualStateManager.VisualStateGroups>
                                 <Border x:Name="Background" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3"/>
-                                <Rectangle x:Name="DisabledVisualElement" Fill="{DynamicResource ControlsDisabledBrush}" IsHitTestVisible="False" Opacity="0" RadiusY="3" RadiusX="3"/>
+                                <Rectangle x:Name="DisabledVisualElement"  IsHitTestVisible="False" Opacity="0" RadiusY="3" RadiusX="3"/>
                                 <Border x:Name="MouseOverBorder" BorderThickness="1" BorderBrush="#FF9D9D9D" CornerRadius="3.5" Opacity="0"/>
                                 <Border x:Name="PressedBorder" BorderThickness="1" BorderBrush="#FFEAEDEC"  CornerRadius="3.5" Opacity="0"/>
-                                <Rectangle x:Name="FocusRectangle" Margin="-1" Opacity="0" RadiusY="4" RadiusX="4" Stroke="{DynamicResource TextBoxMouseOverInnerBorderBrush}" StrokeThickness="0"/>
-                                <Rectangle x:Name="FocusInnerRectangle" Opacity="0" RadiusY="3" RadiusX="3" Stroke="{DynamicResource TextBoxMouseOverBorderBrush}" StrokeThickness="0"/>
+                                <Rectangle x:Name="FocusRectangle" Margin="-1" Opacity="0" RadiusY="4" RadiusX="4" StrokeThickness="0"/>
+                                <Rectangle x:Name="FocusInnerRectangle" Opacity="0" RadiusY="3" RadiusX="3"  StrokeThickness="0"/>
                                 <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                             </Grid>
                         </ControlTemplate>
@@ -221,7 +221,7 @@
 		   </Menu>
 	   </StackPanel>
 	   <!--textbox in middle-->
-	    	<TextBox Grid.Row="1" Controls:TextboxHelper.Watermark="扫描运单号" Margin="110,5,50,0" FontSize="15" FontFamily="微软雅黑" 
+	    	<TextBox Grid.Row="1" Controls:TextboxHelper.Watermark="扫描运单号" Margin="112,0,57,0" FontSize="15" FontFamily="微软雅黑" 
                          VerticalAlignment="Bottom" Controls:TextboxHelper.ClearTextButton="True" />
 	    	<TextBox Grid.Row="1" Grid.Column="1" Controls:TextboxHelper.Watermark="扫描包装箱号" Margin="33,0,83.5,0" FontSize="15" FontFamily="微软雅黑"
                          VerticalAlignment="Bottom" Controls:TextboxHelper.ClearTextButton="True" />						
