@@ -140,10 +140,10 @@
     <Compile Include="NaviWindow.xaml.cs">
       <DependentUpon>NaviWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Operator.xaml.cs">
-      <DependentUpon>Operator.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Printer.cs" />
+    <Compile Include="PrintPackPage.xaml.cs">
+      <DependentUpon>PrintPackPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Session.cs" />
     <Compile Include="Setting.xaml.cs">
       <DependentUpon>Setting.xaml</DependentUpon>
@@ -224,7 +224,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Operator.xaml">
+    <Page Include="PrintPackPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

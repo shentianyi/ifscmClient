@@ -8,7 +8,13 @@
 	Title="DnCheckPage">
     <Page.Resources>
         <ResourceDictionary>
-            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colours.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
             <!--menu-->
             <Style x:Key="Menu" TargetType="{x:Type Menu}">
                 <Setter Property="Background" Value="{x:Null}" />
@@ -155,17 +161,28 @@
                          VerticalAlignment="Bottom"   />
         <!--bottom left-->
         <Canvas>
-            <Label Content="11" FontSize="65" Canvas.Right="180"  Foreground="#FF1297cf"  Canvas.Top="134.604"/>
-            <Label Content="20" FontSize="85" Canvas.Right="50"  Foreground="#FFeaedec"  Canvas.Top="231.707"/>
-            <Border BorderBrush="#FFeaedec" BorderThickness="3" Canvas.Right="52"  Width="225.253" Padding="5"  Canvas.Top="393.497">
-                <UniformGrid Rows="1" Columns="4" Margin="14,0,-14,0" >
-                    <Label FontSize="20" Foreground="#FF9D9D9D" VerticalAlignment="Center" HorizontalAlignment="Right" Content="正确："/>
-                    <Label FontSize="20" Foreground="#FF1ead1a" VerticalAlignment="Center" HorizontalAlignment="left" Content="10"/>
-                    <Label FontSize="20" Foreground="#FF9D9D9D" VerticalAlignment="Center" HorizontalAlignment="right" Content="错误："/>
-                    <Label FontSize="20" Foreground="#FFf34a4a" VerticalAlignment="Center" HorizontalAlignment="left" Content="1"/>
-                </UniformGrid>
+            <Border BorderBrush="#FFeaedec" BorderThickness="3"   Width="330.253" Padding="5" Canvas.Right="5" Canvas.Top="121.104" Height="328"  >
             </Border>
-            <Path Data="M269.856,91.106 L149.34124,211.62076" Fill="#FF9D9D9D" Height="144.831" Canvas.Right="86" Stretch="Fill" Stroke="#FFeaedec"  Width="158.728" StrokeThickness="3"  Canvas.Top="169.063" />
+            <Label Content="11" FontSize="75" Canvas.Right="170"  Foreground="#FF1297cf"  Canvas.Top="159"  />
+            <Label Content="20" FontSize="95" Canvas.Right="48"  Foreground="#FFeaedec"  Canvas.Top="252.707" Canvas.Left="215.08" />
+
+            <UniformGrid Rows="1" Columns="4" Canvas.Top="415.997" Canvas.Right="0"  Width="186.253" Canvas.Left="228.747">
+                <Label FontSize="15" Foreground="#FF9D9D9D" VerticalAlignment="Center" HorizontalAlignment="right" Content="正确:"/>
+                <Label FontSize="15" Foreground="#FF1ead1a" VerticalAlignment="Center" HorizontalAlignment="Left" Content="10"/>
+                <Label FontSize="15" Foreground="#FF9D9D9D" VerticalAlignment="Center" HorizontalAlignment="Right" Content="错误:"/>
+                <Label FontSize="15" Foreground="#FFf34a4a" VerticalAlignment="Center" HorizontalAlignment="Left" Content="1"/>
+            </UniformGrid>
+
+            <Path Data="M269.856,91.106 L149.34124,211.62076" Fill="#FF9D9D9D" Height="137.974" Canvas.Right="100" Stretch="Fill" Stroke="#FFeaedec"  Width="156.031" StrokeThickness="3"  Canvas.Top="200.596"  RenderTransformOrigin="0.5,0.5" Canvas.Left="144.218"  >
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="2.003"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
         </Canvas>
         <!--bottom right-->
         <ListBox Margin="22.5,15.5,83.5,95" Grid.Column="1" Grid.Row="1"  HorizontalContentAlignment="Stretch" >

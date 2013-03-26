@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using Brilliantech.MonoScmPrinter.ClientCL.Model;
 
 namespace Brilliantech.MonoScmPrinter.Client
 {
@@ -19,14 +20,17 @@ namespace Brilliantech.MonoScmPrinter.Client
     /// </summary>
     public partial class NaviWindow : MetroWindow
     {
+        LoginInfo loginInfo;
         public NaviWindow()
         {
             InitializeComponent();
+            loginInfo = Session.Get("LoginInfo") as LoginInfo;
+            user_tb.Text = loginInfo.staffNr;
         }
 
         private void MainPageTB_MouseUp(object sender, MouseButtonEventArgs e)
         { 
-            BodyFrame.Navigate(new DnCheckPage());
+            
         }
 
         private void logout_btn_Click(object sender, RoutedEventArgs e)
@@ -47,6 +51,30 @@ namespace Brilliantech.MonoScmPrinter.Client
             bird_img.Source = new BitmapImage(new Uri("Images\\bird.png", UriKind.Relative));
         }
 
+        private void DnCheckPageTB_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            BodyFrame.Navigate(new DnCheckPage());
+        }
+
+        private void PrintPageTB_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            BodyFrame.Navigate(new PrintPackPage(this.loginInfo));
+        }
+        private void setting_btn_Click(object sender, RoutedEventArgs e)
+        {
+            ShowSettigDialog();
+        }
+
+
+        private void setting_lb_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            ShowSettigDialog();
+        }
+
+        private void ShowSettigDialog()
+        {
+            new Setting().ShowDialog();
+        }
 
     }
 }
