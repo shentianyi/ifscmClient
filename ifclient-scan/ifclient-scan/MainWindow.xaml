@@ -5,7 +5,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         mc:Ignorable="d" x:Class="ifclient_scan.MainWindow"
         Title="运单核对" Height="600" Width="800" MinHeight="600" MinWidth="800" 
-		ResizeMode="CanResizeWithGrip"
+		ResizeMode="CanMinimize"
+		
 		WindowStartupLocation="CenterScreen"
 		TitlebarHeight="55"
 		ShowInTaskbar="True"
@@ -31,7 +32,7 @@
 
        <!--menu header style-->
 	   <Style x:Key="MenuHeader" TargetType="{x:Type TextBlock}" >
-			  <Setter Property="FontFamily" Value="Microsoft Tai Le" />
+			  <Setter Property="FontFamily" Value="微软雅黑" />
 			  			 
 			  <Setter Property="VerticalAlignment" Value="Center" />
 			  <Setter Property="HorizontalAlignment" Value="Center" />	
@@ -133,17 +134,18 @@
                                     </VisualStateGroup>
                                 </VisualStateManager.VisualStateGroups>
                                 <Border x:Name="Background" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3"/>
-                                <Rectangle x:Name="DisabledVisualElement" Fill="{DynamicResource ControlsDisabledBrush}" IsHitTestVisible="False" Opacity="0" RadiusY="3" RadiusX="3"/>
+                                <Rectangle x:Name="DisabledVisualElement"  IsHitTestVisible="False" Opacity="0" RadiusY="3" RadiusX="3"/>
                                 <Border x:Name="MouseOverBorder" BorderThickness="1" BorderBrush="#FF9D9D9D" CornerRadius="3.5" Opacity="0"/>
                                 <Border x:Name="PressedBorder" BorderThickness="1" BorderBrush="#FFEAEDEC"  CornerRadius="3.5" Opacity="0"/>
-                                <Rectangle x:Name="FocusRectangle" Margin="-1" Opacity="0" RadiusY="4" RadiusX="4" Stroke="{DynamicResource TextBoxMouseOverInnerBorderBrush}" StrokeThickness="0"/>
-                                <Rectangle x:Name="FocusInnerRectangle" Opacity="0" RadiusY="3" RadiusX="3" Stroke="{DynamicResource TextBoxMouseOverBorderBrush}" StrokeThickness="0"/>
+                                <Rectangle x:Name="FocusRectangle" Margin="-1" Opacity="0" RadiusY="4" RadiusX="4" StrokeThickness="0"/>
+                                <Rectangle x:Name="FocusInnerRectangle" Opacity="0" RadiusY="3" RadiusX="3"  StrokeThickness="0"/>
                                 <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                             </Grid>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
             </Style>
+
 		
 
 		
@@ -219,41 +221,46 @@
 		   </Menu>
 	   </StackPanel>
 	   <!--textbox in middle-->
-	    	<TextBox Grid.Row="1" Controls:TextboxHelper.Watermark="扫描运单号" Margin="110,5,50,0" FontSize="15" FontFamily="微软雅黑" 
+	    	<TextBox Grid.Row="1" Controls:TextboxHelper.Watermark="扫描运单号" Margin="112,0,57,0" FontSize="15" FontFamily="微软雅黑" 
                          VerticalAlignment="Bottom" Controls:TextboxHelper.ClearTextButton="True" />
-	    	<TextBox Grid.Row="1" Grid.Column="1" Controls:TextboxHelper.Watermark="扫描包装箱号" Margin="33,0,90.167,0" FontSize="15" FontFamily="微软雅黑"
+	    	<TextBox Grid.Row="1" Grid.Column="1" Controls:TextboxHelper.Watermark="扫描包装箱号" Margin="33,0,83.5,0" FontSize="15" FontFamily="微软雅黑"
                          VerticalAlignment="Bottom" Controls:TextboxHelper.ClearTextButton="True" />						
 			<!--bottom left-->
 	         <Canvas >
-			  <Label Content="11" FontSize="65" Canvas.Right="180"  Foreground="#FF1297cf"  Canvas.Top="134.604"/>
-			  <Label Content="20" FontSize="85" Canvas.Right="50"  Foreground="#FFeaedec"  Canvas.Top="231.707"/>
-			  <Border BorderBrush="#FFeaedec" BorderThickness="3" Canvas.Right="52"  Width="225.253" Padding="5"  Canvas.Top="393.497">
-			  <UniformGrid Rows="1" Columns="4" Margin="14,0,-14,0" >
-			  	<Label FontSize="20" Foreground="#FF9D9D9D" VerticalAlignment="Center" HorizontalAlignment="Right" Content="正确："/>
-				<Label FontSize="20" Foreground="#FF1ead1a" VerticalAlignment="Center" HorizontalAlignment="left" Content="10"/>
-				<Label FontSize="20" Foreground="#FF9D9D9D" VerticalAlignment="Center" HorizontalAlignment="right" Content="错误："/>
-				<Label FontSize="20" Foreground="#FFf34a4a" VerticalAlignment="Center" HorizontalAlignment="left" Content="1"/>
+	         	<Border BorderBrush="#FFeaedec" BorderThickness="3"   Width="330.253" Padding="5" Canvas.Right="5" Canvas.Top="121.104" Height="328"  >
+	          </Border>
+			  <Label Content="11" FontSize="75" Canvas.Right="170"  Foreground="#FF1297cf"  Canvas.Top="159"  />
+			  <Label Content="20" FontSize="95" Canvas.Right="48"  Foreground="#FFeaedec"  Canvas.Top="252.707" Canvas.Left="215.08" />
+			  
+			  <UniformGrid Rows="1" Columns="4" Canvas.Top="415.997" Canvas.Right="0"  Width="186.253" Canvas.Left="228.747">
+			  	<Label FontSize="15" Foreground="#FF9D9D9D" VerticalAlignment="Center" HorizontalAlignment="right" Content="正确:"/>
+				<Label FontSize="15" Foreground="#FF1ead1a" VerticalAlignment="Center" HorizontalAlignment="Left" Content="10"/>
+				<Label FontSize="15" Foreground="#FF9D9D9D" VerticalAlignment="Center" HorizontalAlignment="Right" Content="错误:"/>
+				<Label FontSize="15" Foreground="#FFf34a4a" VerticalAlignment="Center" HorizontalAlignment="Left" Content="1"/>
 			  </UniformGrid>
-			  </Border>
-			  <Path Data="M269.856,91.106 L149.34124,211.62076" Fill="#FF9D9D9D" Height="144.831" Canvas.Right="86" Stretch="Fill" Stroke="#FFeaedec"  Width="158.728" StrokeThickness="3"  Canvas.Top="169.063" />
+			 
+			  <Path Data="M269.856,91.106 L149.34124,211.62076" Fill="#FF9D9D9D" Height="137.974" Canvas.Right="100" Stretch="Fill" Stroke="#FFeaedec"  Width="156.031" StrokeThickness="3"  Canvas.Top="200.596"  RenderTransformOrigin="0.5,0.5" Canvas.Left="144.218"  >
+			  	<Path.RenderTransform>
+			  		<TransformGroup>
+			  			<ScaleTransform/>
+			  			<SkewTransform/>
+			  			<RotateTransform Angle="2.003"/>
+			  			<TranslateTransform/>
+			  		</TransformGroup>
+			  	</Path.RenderTransform>
+			  </Path>
 		    </Canvas>
 		<!--bottom right-->
 		<ListBox Margin="22.5,15.5,83.5,95" Grid.Column="1" Grid.Row="2"  HorizontalContentAlignment="Stretch" >
 			  	<ListBox.ItemContainerStyle>
 			  		<Style TargetType="{x:Type ListBoxItem}">
-			  			<Setter Property="FontSize" Value="13" />
-					
-					<Style.Triggers>
-						<Trigger Property="IsSelected" Value="True">
-							<Setter  Property="Background" Value="yellow" />
-						</Trigger>
-
-					</Style.Triggers> 
+			  			<Setter Property="FontSize" Value="13" />				
+					    <Setter Property="Margin" Value="3,0,0,0" />
 					</Style>	
-				</ListBox.ItemContainerStyle>		
-				<ListBox.ItemTemplate>
+				</ListBox.ItemContainerStyle>	
+				<ListBox.ItemTemplate>					
 					<DataTemplate>
-						<Border Style="{StaticResource NormalBorder}">
+						<Border  Style="{StaticResource NormalBorder}">
 					  <Grid>
 					  	<Grid.RowDefinitions>
 					  		<RowDefinition></RowDefinition> 
@@ -270,8 +277,8 @@
 					</DataTemplate>
 				</ListBox.ItemTemplate>	
 				
-		<!--实验用的数据-->		
-				<ListBoxItem >
+		<!--以下实验用的数据-->		
+				<ListBoxItem  >
 					<Border Style="{StaticResource NormalBorder}" >
 					  <Grid Margin="0,0,-1,0">
 					  	<Grid.RowDefinitions>
@@ -388,7 +395,7 @@
 	    <!--button bottom right-->
 		<Button Grid.Row="2" Grid.Column="1" Width="128" Height="37.5" Style="{DynamicResource ButtonStyle}" 
 		FontSize="15" 
-		 VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,88.167,33">
+		 VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,83.5,31">
 			核对完成
 		</Button>
 				

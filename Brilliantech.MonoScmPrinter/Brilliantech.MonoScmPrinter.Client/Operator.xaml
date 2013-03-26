@@ -117,10 +117,12 @@
                 <Setter Property="FontWeight" Value="Normal"/>
                 <Setter Property="FontSize" Value="15"/>
                 <Setter Property="FontFamily" Value="微软雅黑"/>
-                <Setter Property="Background" Value="{DynamicResource GrayBrush7}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}"/>
+                <Setter Property="Background" Value="#FFf9f9f9"/>
+                <Setter Property="BorderBrush" Value="#FFb9b8b8"/>
                 <Setter Property="Foreground" Value="#FF858484"/>
                 <Setter Property="Padding" Value="0,7" />
+				                <Setter Property="Foreground" Value="#FF858484"/>  
+				<Setter Property="Cursor" Value="Hand" />   
                 <Setter Property="BorderThickness" Value="1"/>
                 <Setter Property="Template">
                     <Setter.Value>
@@ -170,8 +172,8 @@
                                 </VisualStateManager.VisualStateGroups>
                                 <Border x:Name="Background" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3"/>
                                 <Rectangle x:Name="DisabledVisualElement" Fill="{DynamicResource ControlsDisabledBrush}" IsHitTestVisible="False" Opacity="0" RadiusY="3" RadiusX="3"/>
-                                <Border x:Name="MouseOverBorder" BorderThickness="2" BorderBrush="#FF6EA9F7" Background="#FFEFEFEF" CornerRadius="3.5" Opacity="0"/>
-                                <Border x:Name="PressedBorder" BorderThickness="1" BorderBrush="#FF6EA9F7" Background="white" CornerRadius="3.5" Opacity="0"/>
+                                <Border x:Name="MouseOverBorder" BorderThickness="2" BorderBrush="#FF9D9D9D"  CornerRadius="3.5" Opacity="0"/>
+                                <Border x:Name="PressedBorder" BorderThickness="1" BorderBrush="#FFEAEDEC" CornerRadius="3.5" Opacity="0"/>
                                 <Rectangle x:Name="FocusRectangle" Margin="-1" Opacity="0" RadiusY="4" RadiusX="4" Stroke="{DynamicResource TextBoxMouseOverInnerBorderBrush}" StrokeThickness="0"/>
                                 <Rectangle x:Name="FocusInnerRectangle" Opacity="0" RadiusY="3" RadiusX="3" Stroke="{DynamicResource TextBoxMouseOverBorderBrush}" StrokeThickness="0"/>
                                 <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
@@ -260,9 +262,12 @@
                 </DataGrid>
             </Grid>
         </Border>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2" Margin="0,0,0,22" Width="443">
-            <CheckBox x:Name="print_cb" Content="打印选择项"  VerticalAlignment="Center"  Foreground="#FF858484"/>
-            <Label Content="打印样式："  FontSize="18"   VerticalAlignment="Center" Foreground="#FF858484" Margin="5,0,0,0"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2" Margin="0,0,15,22" Width="428">
+        	<StackPanel Margin="25,0,6,0">
+            <CheckBox x:Name="print_cb"   VerticalAlignment="Center" HorizontalAlignment="Center" Margin="7,15,0,0" Foreground="#FF858484"/>
+			<Label Content="只打被选项" Foreground="#FF858484" Margin="0,-2,0,0"  />
+			</StackPanel>
+            <Label Content="打印样式："  FontSize="15"   VerticalAlignment="Center" Foreground="#FF858484" Margin="5,0,0,0"/>
             <ComboBox  x:Name="template_combo" Canvas.Left="239" Canvas.Top="45" Height="35" Width="116" DisplayMemberPath="desc" SelectedValuePath="value"
                          Margin="0"/>
             <Button x:Name="print_btn"  HorizontalAlignment="right" FontSize="18"  Margin="25,0,25,0" Click="print_btn_Click" Height="36"
