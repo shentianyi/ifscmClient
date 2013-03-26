@@ -31,7 +31,7 @@
 
             <!--menu header style-->
             <Style x:Key="MenuHeader" TargetType="{x:Type TextBlock}" >
-                <Setter Property="FontFamily" Value="Microsoft Tai Le" />
+                <Setter Property="FontFamily" Value="微软雅黑" />
 
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="HorizontalAlignment" Value="Center" />
@@ -55,7 +55,7 @@
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Foreground" Value="#FF1297cf" />
-                                    <Setter Property="FontSize" Value="21" />
+                                    <Setter Property="FontSize" Value="18" />
                                     <Setter Property="Cursor" Value="Hand" />
                                 </Trigger>
                             </ControlTemplate.Triggers>
@@ -193,52 +193,53 @@
             <RowDefinition Height="0.819*"/>
         </Grid.RowDefinitions>
         <!--Grey menu-->
-        <Border  Background="#FFEFEFEF" BorderThickness="0,1,0,0" BorderBrush="AliceBlue" Grid.ColumnSpan="2"/>
-        <StackPanel Orientation="Horizontal" Margin="0,0,-38,0" d:LayoutOverrides="Width">
-            <Menu Style="{StaticResource Menu}" >
-                <Menu.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <Grid />
-                    </ItemsPanelTemplate>
-                </Menu.ItemsPanel>
-                <MenuItem Style="{StaticResource MenuItem1}"   >
-                    <MenuItem.Header >
-                        <TextBlock Text="主页" Style="{StaticResource MenuHeader}" MouseUp="MainPageTB_MouseUp" Name="MainPageTB"/>
-                    </MenuItem.Header>
-                </MenuItem>
-            </Menu>
+        <Border  Background="#FFEFEFEF" BorderThickness="0,1,0,0" BorderBrush="AliceBlue" Grid.ColumnSpan="2" >
+            <StackPanel Orientation="Horizontal" Margin="0,0,-38,0" d:LayoutOverrides="Width">
+                <Menu Style="{StaticResource Menu}" >
+                    <Menu.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <Grid />
+                        </ItemsPanelTemplate>
+                    </Menu.ItemsPanel>
+                    <MenuItem Style="{StaticResource MenuItem1}"   >
+                        <MenuItem.Header >
+                            <TextBlock Text="主页" Style="{StaticResource MenuHeader}" MouseUp="MainPageTB_MouseUp" Name="MainPageTB"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </Menu>
 
-            <Menu Style="{StaticResource Menu}" >
-                <Menu.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <Grid />
-                    </ItemsPanelTemplate>
-                </Menu.ItemsPanel>
-                <MenuItem Style="{StaticResource MenuItem1}"   >
-                    <MenuItem.Header >
-                        <TextBlock Text="标签打印" Style="{StaticResource MenuHeader}" MouseUp="PrintPageTB_MouseUp" Name="PrintPageTB"/>
-                    </MenuItem.Header>
-                </MenuItem>
-            </Menu>
+                <Menu Style="{StaticResource Menu}" >
+                    <Menu.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <Grid />
+                        </ItemsPanelTemplate>
+                    </Menu.ItemsPanel>
+                    <MenuItem Style="{StaticResource MenuItem1}"   >
+                        <MenuItem.Header >
+                            <TextBlock Text="标签打印" Style="{StaticResource MenuHeader}" MouseUp="PrintPageTB_MouseUp" Name="PrintPageTB"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </Menu>
 
-            <Menu Style="{StaticResource Menu}" >
-                <Menu.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <Grid />
-                    </ItemsPanelTemplate>
-                </Menu.ItemsPanel>
-                <MenuItem Style="{StaticResource MenuItem1}"   >
-                    <MenuItem.Header >
-                        <TextBlock Text="运单核对" Style="{StaticResource MenuHeader}" Name="DnCheckPageTB" MouseUp="DnCheckPageTB_MouseUp"/>
-                    </MenuItem.Header>
-                </MenuItem>
-            </Menu>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" d:LayoutOverrides="GridBox" Margin="0,0,0,0">
-                <Button x:Name="setting_btn" Margin="0,0,4,0" Style="{DynamicResource ButtonStyle1}" Width="29.762" Click="setting_btn_Click" />
-                <Label x:Name="setting_lb" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,0,35,0" FontSize="16"
+                <Menu Style="{StaticResource Menu}" >
+                    <Menu.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <Grid />
+                        </ItemsPanelTemplate>
+                    </Menu.ItemsPanel>
+                    <MenuItem Style="{StaticResource MenuItem1}"   >
+                        <MenuItem.Header >
+                            <TextBlock Text="运单核对" Style="{StaticResource MenuHeader}" Name="DnCheckPageTB" MouseUp="DnCheckPageTB_MouseUp"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </Menu>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" d:LayoutOverrides="GridBox" Margin="395,0,0,0">
+                    <Button x:Name="setting_btn" Cursor="Hand" Margin="0,0,4,0" Style="{DynamicResource ButtonStyle1}" Width="29.762" Click="setting_btn_Click" />
+                    <Label x:Name="setting_lb" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,0,35,0" FontSize="16"
                        Foreground="#FF8D8D8D" Content="设置" MouseLeftButtonUp="setting_lb_MouseLeftButtonUp" />
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
+        </Border>
         <Frame Name="BodyFrame" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" NavigationUIVisibility="Hidden" />
     </Grid>
 
