@@ -31,7 +31,7 @@
 
        <!--menu header style-->
 	   <Style x:Key="MenuHeader" TargetType="{x:Type TextBlock}" >
-			  <Setter Property="FontFamily" Value="Microsoft Tai Le" />
+			  <Setter Property="FontFamily" Value="微软雅黑" />
 			  			 
 			  <Setter Property="VerticalAlignment" Value="Center" />
 			  <Setter Property="HorizontalAlignment" Value="Center" />	
@@ -144,6 +144,7 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+
 		
 
 		
@@ -221,7 +222,7 @@
 	   <!--textbox in middle-->
 	    	<TextBox Grid.Row="1" Controls:TextboxHelper.Watermark="扫描运单号" Margin="110,5,50,0" FontSize="15" FontFamily="微软雅黑" 
                          VerticalAlignment="Bottom" Controls:TextboxHelper.ClearTextButton="True" />
-	    	<TextBox Grid.Row="1" Grid.Column="1" Controls:TextboxHelper.Watermark="扫描包装箱号" Margin="33,0,90.167,0" FontSize="15" FontFamily="微软雅黑"
+	    	<TextBox Grid.Row="1" Grid.Column="1" Controls:TextboxHelper.Watermark="扫描包装箱号" Margin="33,0,83.5,0" FontSize="15" FontFamily="微软雅黑"
                          VerticalAlignment="Bottom" Controls:TextboxHelper.ClearTextButton="True" />						
 			<!--bottom left-->
 	         <Canvas >
@@ -241,19 +242,14 @@
 		<ListBox Margin="22.5,15.5,83.5,95" Grid.Column="1" Grid.Row="2"  HorizontalContentAlignment="Stretch" >
 			  	<ListBox.ItemContainerStyle>
 			  		<Style TargetType="{x:Type ListBoxItem}">
-			  			<Setter Property="FontSize" Value="13" />
-					
-					<Style.Triggers>
-						<Trigger Property="IsSelected" Value="True">
-							<Setter  Property="Background" Value="yellow" />
-						</Trigger>
+			  			<Setter Property="FontSize" Value="13" />				
+					    <Setter Property="Margin" Value="3,0,0,0" />
 
-					</Style.Triggers> 
 					</Style>	
-				</ListBox.ItemContainerStyle>		
-				<ListBox.ItemTemplate>
+				</ListBox.ItemContainerStyle>	
+				<ListBox.ItemTemplate>					
 					<DataTemplate>
-						<Border Style="{StaticResource NormalBorder}">
+						<Border  Style="{StaticResource NormalBorder}">
 					  <Grid>
 					  	<Grid.RowDefinitions>
 					  		<RowDefinition></RowDefinition> 
@@ -270,8 +266,8 @@
 					</DataTemplate>
 				</ListBox.ItemTemplate>	
 				
-		<!--实验用的数据-->		
-				<ListBoxItem >
+		<!--以下实验用的数据-->		
+				<ListBoxItem  >
 					<Border Style="{StaticResource NormalBorder}" >
 					  <Grid Margin="0,0,-1,0">
 					  	<Grid.RowDefinitions>
@@ -388,7 +384,7 @@
 	    <!--button bottom right-->
 		<Button Grid.Row="2" Grid.Column="1" Width="128" Height="37.5" Style="{DynamicResource ButtonStyle}" 
 		FontSize="15" 
-		 VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,88.167,33">
+		 VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,83.5,31">
 			核对完成
 		</Button>
 				
