@@ -462,7 +462,8 @@
                         <ComboBoxItem Content="斑马打印机" Style="{DynamicResource SubComboBoxItemStyle}" Tag="18"/>
                     </ComboBox>
                     <Label Canvas.Left="143" Canvas.Top="150.543" Content="打印张数" Style="{StaticResource label}"/>
-                    <xctk:IntegerUpDown x:Name="number_page" Height="26.437" Canvas.Left="239" Canvas.Top="155.543" Width="81" Text="1" Minimum="1"/>
+                    <TextBox x:Name="number_page" Height="26.437" Canvas.Left="239" Canvas.Top="155.543" Width="81" Text="1"
+                              FontFamily="微软雅黑" FontSize="14"   VerticalContentAlignment="Center"  VerticalAlignment="Bottom"  Foreground="#FF7A7A7A" />
                 </Canvas>
             </TabItem>
 

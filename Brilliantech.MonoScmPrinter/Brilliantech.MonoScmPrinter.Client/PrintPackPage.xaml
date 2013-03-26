@@ -5,7 +5,7 @@
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
         x:Class="Brilliantech.MonoScmPrinter.Client.PrintPackPage"
      xmlns:System="clr-namespace:System;assembly=mscorlib" 
-        Title="printer" Height="600" Width="800" MinHeight="600" MinWidth="800"   Loaded="MetroWindow_Loaded">
+        Title="printer" Height="600" Width="800" MinHeight="600" MinWidth="800"   Loaded="PrintPage_Loaded">
 
     <Page.Resources>
         <ResourceDictionary>
@@ -237,10 +237,10 @@
                         </Style>
                     </DataGrid.ColumnHeaderStyle>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="包装箱号" Binding="{Binding Path=key}" ElementStyle="{StaticResource contentCenterStyle}" />
+                        <DataGridTextColumn Header="包装号" Binding="{Binding Path=key}" ElementStyle="{StaticResource contentCenterStyle}" />
                         <DataGridTextColumn Header="零件号" Binding="{Binding Path=spartNr}" ElementStyle="{StaticResource contentCenterStyle}" />
                         <DataGridTextColumn Header="客户零件号" Binding="{Binding Path=cpartNr}" ElementStyle="{StaticResource contentCenterStyle}" />
-                        <DataGridTextColumn Header="单位量" Binding="{Binding Path=perPackAmount}" ElementStyle="{StaticResource contentCenterStyle}" />
+                        <DataGridTextColumn Header="单位包装量" Binding="{Binding Path=perPackAmount}" ElementStyle="{StaticResource contentCenterStyle}" />
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>

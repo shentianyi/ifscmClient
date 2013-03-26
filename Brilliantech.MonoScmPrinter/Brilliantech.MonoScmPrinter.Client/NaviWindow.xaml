@@ -9,7 +9,7 @@
 		WindowStartupLocation="CenterScreen"
 		TitlebarHeight="55"
 		ShowInTaskbar="True"
-		Icon="headicon.png" >
+		Icon="headicon.png">
     <Controls:MetroWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

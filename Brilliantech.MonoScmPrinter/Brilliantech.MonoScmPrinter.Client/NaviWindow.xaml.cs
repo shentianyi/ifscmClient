@@ -53,7 +53,7 @@ namespace Brilliantech.MonoScmPrinter.Client
 
         private void DnCheckPageTB_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            BodyFrame.Navigate(new DnCheckPage());
+            BodyFrame.Navigate(new DnCheckPage(this.loginInfo));
         }
 
         private void PrintPageTB_MouseUp(object sender, MouseButtonEventArgs e)

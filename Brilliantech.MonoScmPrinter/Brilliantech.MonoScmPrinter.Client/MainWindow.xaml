@@ -3,8 +3,8 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"              
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Custom="http://metro.mahapps.com/winfx/xaml/shared"
-    mc:Ignorable="d" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Custom="http://metro.mahapps.com/winfx/xaml/shared"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" 
     x:Class="Brilliantech.MonoScmPrinter.Client.MainWindow"
 		ShowIconOnTitleBar="True" WindowStartupLocation="CenterScreen" ShowInTaskbar="True"
 		TitlebarHeight="50" FontFamily="微软雅黑" AllowsTransparency="True"
@@ -97,9 +97,10 @@
         <Controls:MetroProgressBar x:Name="login_probar" Width="511"  VerticalAlignment="Stretch" Visibility="Hidden"
                                    IsIndeterminate="True" Foreground="#FF509FE7" Height="13" Canvas.Top="217" />
         <Label  VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="19" Foreground="#E89D9D9D" Content="用户名" Canvas.Left="119" Canvas.Top="56.923" />
-        <TextBox x:Name="name_tb"  FontFamily="微软雅黑" FontSize="14"  Width="175"  VerticalContentAlignment="Center"  VerticalAlignment="Bottom"  Foreground="#FF7A7A7A" Canvas.Left="197.5" Canvas.Top="61.213"  />
+        <TextBox x:Name="name_tb"  FontFamily="微软雅黑" FontSize="14"  Width="175"  VerticalContentAlignment="Center"  VerticalAlignment="Bottom"  Foreground="#FF7A7A7A" Canvas.Left="197.5" Canvas.Top="61.213" Text="leoni" />
         <Label VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="19" Foreground="#E89D9D9D" Content="密码" Canvas.Left="119" Canvas.Top="106.11" />
-        <PasswordBox x:Name="password_pb"  FontFamily="微软雅黑" FontSize="14"  Width="175" VerticalContentAlignment="Center"  VerticalAlignment="Top" Foreground="#FF7A7A7A" Canvas.Left="197.5" Canvas.Top="112.4" />
+        <PasswordBox x:Name="password_pb"  FontFamily="微软雅黑" FontSize="14" 
+                     Width="175" VerticalContentAlignment="Center"  VerticalAlignment="Top" Foreground="#FF7A7A7A" Canvas.Left="197.5" Canvas.Top="112.4" Password="leoni" />
         <Button x:Name="login_btn" Click="login_btn_Click"   FontSize="16" IsDefault="True"
                 Content="登陆" HorizontalAlignment="Right" Padding="20,8" Foreground="#FF7A7A7A" Style="{DynamicResource ButtonStyle1}" Canvas.Left="345.5" Canvas.Top="163" />
 

@@ -37,7 +37,7 @@ namespace Brilliantech.MonoScmPrinter.Client
             this.loginInfo = loginInfo;
         }
 
-        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        private void PrintPage_Loaded(object sender, RoutedEventArgs e)
         {
             restDelivery = new RestDelivery();
             restFile = new RestFile();
@@ -81,7 +81,7 @@ namespace Brilliantech.MonoScmPrinter.Client
             }
             catch (RestHostMissingException ex)
             {
-                new MsgBox(MsgLevel.Warning, ex.Message);
+                new MsgBox(MsgLevel.Warning, ex.Message).ShowDialog();
             }
         }
 
@@ -96,7 +96,7 @@ namespace Brilliantech.MonoScmPrinter.Client
             }
             catch (RestHostMissingException ex)
             {
-                new MsgBox(MsgLevel.Warning, ex.Message);
+                new MsgBox(MsgLevel.Warning, ex.Message).ShowDialog();
             }
         }
 
@@ -120,7 +120,7 @@ namespace Brilliantech.MonoScmPrinter.Client
             }
             catch (RestHostMissingException ex)
             {
-                new MsgBox(MsgLevel.Warning, ex.Message);
+                new MsgBox(MsgLevel.Warning, ex.Message).ShowDialog();
             }
         }
 
@@ -170,7 +170,7 @@ namespace Brilliantech.MonoScmPrinter.Client
             }
             catch (RestHostMissingException ex)
             {
-                new MsgBox(MsgLevel.Warning, ex.Message);
+                new MsgBox(MsgLevel.Warning, ex.Message).ShowDialog();
             }
         }
 
@@ -198,7 +198,7 @@ namespace Brilliantech.MonoScmPrinter.Client
             }
             catch (RestHostMissingException ex)
             {
-                new MsgBox(MsgLevel.Warning, ex.Message);
+                new MsgBox(MsgLevel.Warning, ex.Message).ShowDialog();
             }
         }
 
@@ -245,7 +245,7 @@ namespace Brilliantech.MonoScmPrinter.Client
             }
             catch (RestHostMissingException ex)
             {
-                new MsgBox(MsgLevel.Warning, ex.Message);
+                new MsgBox(MsgLevel.Warning, ex.Message).ShowDialog();
             }
         }
 
