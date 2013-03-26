@@ -55,5 +55,13 @@ namespace Brilliantech.MonoScmPrinter.ClientCL.IRestApis
         /// </summary>
         /// <returns></returns>
         List<EnumItem> ClientPackTemplate();
+
+        /// <summary>
+        /// dn arrive
+        /// </summary>
+        /// <param name="orgId">organisation id</param>
+        /// <param name="dnKey">delivery key</param>
+        /// <returns></returns>
+        ReturnMsg<string> DnArrive(int orgId, string dnKey);
     }
 }

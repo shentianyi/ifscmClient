@@ -18,6 +18,7 @@ namespace Brilliantech.MonoScmPrinter.ClientCL
         private static string _dnItemPrintDataAction;
         private static string _updatePrinterTemplateAction;
         private static string _dnClientPackTemplateAction;
+        private static string _dnArriveAction;
 
         static BaseConfig()
         {
@@ -33,6 +34,7 @@ namespace Brilliantech.MonoScmPrinter.ClientCL
             _dnItemPrintDataAction = _apiBaseUrl + baseConfig.Get("DnItemPrintDataAction");
             _updatePrinterTemplateAction = _apiBaseUrl + baseConfig.Get("UpdatePrinterTemplateAction");
             _dnClientPackTemplateAction = _apiBaseUrl + baseConfig.Get("DnClientPackTemplateAction");
+            _dnArriveAction = _apiBaseUrl + baseConfig.Get("DnArriveAction");
         }
 
         public static string TemplateBucket
@@ -78,6 +80,13 @@ namespace Brilliantech.MonoScmPrinter.ClientCL
         {
             get { return BaseConfig._dnClientPackTemplateAction; }
         }
+
+        public static string DnArriveAction
+        {
+            get { return BaseConfig._dnArriveAction; }
+        }
+
+
         public static void InitConfig() { }
 
     }

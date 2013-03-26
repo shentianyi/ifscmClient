@@ -66,5 +66,16 @@ namespace Brilliantech.MonoScmPrinter.ClientCL.RestApis
             HttpWebRequest req = RestRequest.CreateWebRequest(BaseConfig.DnClientPackTemplateAction, RequestMethod.Post, 0);
             return JSON.parse<List<EnumItem>>(RestRequest.GetResponse(req, new byte[0]));
         }
+
+
+        public ReturnMsg<string> DnArrive(int orgId, string dnKey)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("dnKey", dnKey);
+            parameters.Add("org_id", orgId.ToString());
+            byte[] bytes = ParameterHelper.generateMutiParametersByte(parameters);
+            HttpWebRequest req = RestRequest.CreateWebRequest(BaseConfig.DnArriveAction, RequestMethod.Post, bytes.Length);
+            return JSON.parse<ReturnMsg<string>>(RestRequest.GetResponse(req, bytes));
+        }
     }
 }

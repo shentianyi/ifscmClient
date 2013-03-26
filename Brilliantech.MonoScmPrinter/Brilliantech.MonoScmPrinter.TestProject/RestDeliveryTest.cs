@@ -133,5 +133,20 @@ namespace Brilliantech.MonoScmPrinter.TestProject
             actual = restDelivery.DnItemPrintData(dnKey,200);
             Assert.AreEqual(template, actual.template);
         }
+
+        /// <summary>
+        ///DnArrive 的测试
+        ///</summary>
+        [TestMethod()]
+        public void DnArriveTest()
+        {
+            IRestDelivery target = new RestDelivery(); // TODO: 初始化为适当的值
+            int orgId = 1; // TODO: 初始化为适当的值
+            string dnKey = "DN130312B8"; // TODO: 初始化为适当的值 
+            ReturnMsg<string> actual;
+            actual = target.DnArrive(orgId, dnKey);
+            Assert.AreEqual(false, actual.result);
+            TestContext.WriteLine(actual.content);
+        }
     }
 }

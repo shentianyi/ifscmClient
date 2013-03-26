@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="179cafa3-ed2f-4629-94b8-c8aedca6bb03" name="Wangsong@WANGSONG-PC 2013-03-25 18:07:52" runUser="Wangsong-PC\Wangsong" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="5a90e3fc-bbcb-4d58-a74b-d117d43c1917">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Wangsong_WANGSONG-PC 2013-03-25 18_07_52">
+      <DeploymentItem filename="D:\File\DLL\ICSharpCode.SharpZipLib.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.BaseCL\bin\Debug\Brilliantech.MonoScmPrinter.BaseCL.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.ReportGenConnector\bin\Debug\Brilliantech.ReportGenConnector.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.ClientCL\bin\Debug\Brilliantech.MonoScmPrinter.ClientCL.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.Service\bin\Debug\MonoScmPrinterService.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-03-25T18:07:52.7308000+08:00" queuing="2013-03-25T18:07:52.8108000+08:00" start="2013-03-25T18:07:52.8288000+08:00" finish="2013-03-25T18:07:53.5768000+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="DnArriveTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\ifscmclient\brilliantech.monoscmprinter\brilliantech.monoscmprinter.testproject\bin\debug\brilliantech.monoscmprinter.testproject.dll" id="b7d09e14-27d0-9def-7015-1696ad3fe075">
+      <Execution id="c4b52650-be1e-41ba-8d24-1dab81d0ff26" />
+      <TestMethod codeBase="C:/Users/Wangsong/Documents/Visual Studio 2010/Projects/ifscmClient/Brilliantech.MonoScmPrinter/Brilliantech.MonoScmPrinter.TestProject/bin/Debug/Brilliantech.MonoScmPrinter.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest, Brilliantech.MonoScmPrinter.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DnArriveTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b7d09e14-27d0-9def-7015-1696ad3fe075" executionId="c4b52650-be1e-41ba-8d24-1dab81d0ff26" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="c4b52650-be1e-41ba-8d24-1dab81d0ff26" testId="b7d09e14-27d0-9def-7015-1696ad3fe075" testName="DnArriveTest" computerName="WANGSONG-PC" duration="00:00:00.4927763" startTime="2013-03-25T18:07:52.8368000+08:00" endTime="2013-03-25T18:07:53.5248000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4b52650-be1e-41ba-8d24-1dab81d0ff26">
+      <Output>
+        <ErrorInfo>
+          <Message>测试方法 Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest.DnArriveTest 引发了异常: 
+System.Runtime.Serialization.SerializationException: 反序列化对象 属于类型 Brilliantech.MonoScmPrinter.ClientCL.Model.ReturnMsg`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]] 时出现错误。遇到意外字符“&lt;”。 ---&gt; System.Xml.XmlException: 遇到意外字符“&lt;”。</Message>
+          <StackTrace>    在 System.Xml.XmlExceptionHelper.ThrowXmlException(XmlDictionaryReader reader, XmlException exception)
+   在 System.Runtime.Serialization.Json.XmlJsonReader.ReadAttributes()
+   在 System.Runtime.Serialization.Json.XmlJsonReader.ReadNonExistentElementName(StringHandleConstStringType elementName)
+   在 System.Runtime.Serialization.Json.XmlJsonReader.Read()
+   在 System.Xml.XmlBaseReader.IsStartElement()
+   在 System.Xml.XmlBaseReader.IsStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri)
+   在 System.Runtime.Serialization.XmlReaderDelegator.IsStartElement(XmlDictionaryString localname, XmlDictionaryString ns)
+   在 System.Runtime.Serialization.XmlObjectSerializer.IsRootElement(XmlReaderDelegator reader, DataContract contract, XmlDictionaryString name, XmlDictionaryString ns)
+   在 System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalIsStartObject(XmlReaderDelegator reader)
+   在 System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName)
+   在 System.Runtime.Serialization.XmlObjectSerializer.InternalReadObject(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   在 System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+ --- 内部异常堆栈跟踪的末尾 ---
+    在 System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   在 System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(XmlDictionaryReader reader)
+   在 System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(Stream stream)
+   在 Brilliantech.MonoScmPrinter.BaseCL.JSON.parse[T](String jsonString) 位置 C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.BaseCL\Utilities\JsonUtil\JSON.cs:行号 16
+   在 Brilliantech.MonoScmPrinter.ClientCL.RestApis.RestDelivery.DnArrive(Int32 orgId, String dnKey) 位置 C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.ClientCL\RestApis\RestDelivery.cs:行号 78
+   在 Brilliantech.MonoScmPrinter.TestProject.RestDeliveryTest.DnArriveTest() 位置 C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\ifscmClient\Brilliantech.MonoScmPrinter\Brilliantech.MonoScmPrinter.TestProject\RestDeliveryTest.cs:行号 148
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

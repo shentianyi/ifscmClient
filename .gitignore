@@ -1,6 +1,7 @@
 # Build and Object Folders
 bin/
 obj/
+TestResult/
 
 
 ## Ignore Visual Studio temporary files, build results, and
