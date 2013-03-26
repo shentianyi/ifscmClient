@@ -78,11 +78,16 @@ namespace Brilliantech.MonoScmPrinter.Client
             ReturnMsg<LoginInfo> info = e.Result as ReturnMsg<LoginInfo>;
             if (info.result)
             {
+                //Session.Set("LoginInfo", info.@object);
+                //Operator operatorWindow = new Operator();
+                //Application.Current.MainWindow = operatorWindow;
+                //this.Close();
+                //operatorWindow.Show();
                 Session.Set("LoginInfo", info.@object);
-                Operator operatorWindow = new Operator();
-                Application.Current.MainWindow = operatorWindow;
+                NaviWindow navi = new NaviWindow();
+                Application.Current.MainWindow = navi;
                 this.Close();
-                operatorWindow.Show();
+                navi.Show();
             }
             else
             {

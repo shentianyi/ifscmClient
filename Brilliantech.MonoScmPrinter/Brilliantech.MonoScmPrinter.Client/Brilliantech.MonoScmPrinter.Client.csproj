@@ -125,12 +125,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DnCheckPage.xaml.cs">
+      <DependentUpon>DnCheckPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Downloader.cs" />
     <Compile Include="MsgBox.xaml.cs">
       <DependentUpon>MsgBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="MsgHandler.xaml.cs">
       <DependentUpon>MsgHandler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NaviWindow.xaml.cs">
+      <DependentUpon>NaviWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Operator.xaml.cs">
       <DependentUpon>Operator.xaml</DependentUpon>
@@ -196,6 +202,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DnCheckPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -205,6 +215,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MsgHandler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NaviWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
