@@ -17,6 +17,7 @@ namespace Brilliantech.MonoScmPrinter.ClientCL
             HttpWebRequest req = WebRequest.Create(endpoint) as HttpWebRequest;
             req.Method = method;
             req.ContentLength = content_length;
+            req.Headers.Add("Authorization", Convert.ToBase64String(new System.Text.ASCIIEncoding().GetBytes("scmdddd")));
             req.ContentType = "application/x-www-form-urlencoded";
             return req;
         }

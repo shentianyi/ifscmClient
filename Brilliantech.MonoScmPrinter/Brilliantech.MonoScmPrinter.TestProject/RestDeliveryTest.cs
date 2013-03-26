@@ -94,18 +94,18 @@ namespace Brilliantech.MonoScmPrinter.TestProject
             Assert.AreEqual(true, actual.result); 
         }
 
-        /// <summary>
-        ///DnPackageList 的测试
-        ///</summary>
-        [TestMethod()]
-        public void DnPackageListTest()
-        {
-            string dnKey = "DN2013012820571"; // TODO: 初始化为适当的值 
-            List<DeliveryPackage> actual;
-            IRestDelivery restDelivery = new RestDelivery();
-            actual = restDelivery.DnPackageList(dnKey);
-            Assert.AreEqual(1, actual.Count); 
-        }
+        ///// <summary>
+        /////DnPackageList 的测试
+        /////</summary>
+        //[TestMethod()]
+        //public void DnPackageListTest()
+        //{
+        //    string dnKey = "DN2013012820571"; // TODO: 初始化为适当的值 
+        //    List<DeliveryPackage> actual;
+        //    IRestDelivery restDelivery = new RestDelivery();
+        //    actual = restDelivery.DnPackageList(dnKey);
+        //    Assert.AreEqual(1, actual.Count); 
+        //}
 
         /// <summary>
         ///DnItemList 的测试

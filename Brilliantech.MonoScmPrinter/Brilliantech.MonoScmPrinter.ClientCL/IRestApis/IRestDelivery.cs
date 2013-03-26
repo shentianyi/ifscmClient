@@ -22,12 +22,12 @@ namespace Brilliantech.MonoScmPrinter.ClientCL.IRestApis
         /// <returns>remove result message</returns>
         ReturnMsg<string> RemoveFromPrintQueue(string dnKey);
 
-        /// <summary>
-        /// get delivery package list
-        /// </summary>
-        /// <param name="dnKey">delivery note key</param>
-        /// <returns>delivery package list</returns>
-        List<DeliveryPackage> DnPackageList(string dnKey);
+        ///// <summary>
+        ///// get delivery package list
+        ///// </summary>
+        ///// <param name="dnKey">delivery note key</param>
+        ///// <returns>delivery package list</returns>
+        //List<DeliveryPackage> DnPackageList(string dnKey);
 
         /// <summary>
         /// get delivery item list
