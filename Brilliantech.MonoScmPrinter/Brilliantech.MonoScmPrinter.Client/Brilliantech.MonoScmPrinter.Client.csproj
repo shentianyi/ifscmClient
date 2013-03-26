@@ -81,9 +81,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MahApps.Metro, Version=0.9.0.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
-      <HintPath>D:\File\DLL\MahApps.Metro.dll</HintPath>
+      <HintPath>..\..\..\..\DLL\MahApps.Metro.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Services.Client" />
@@ -111,7 +112,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="WPFToolkit.Extended">
-      <HintPath>D:\File\DLL\WPFToolkit.Extended.dll</HintPath>
+      <HintPath>..\..\..\..\DLL\WPFToolkit.Extended.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
