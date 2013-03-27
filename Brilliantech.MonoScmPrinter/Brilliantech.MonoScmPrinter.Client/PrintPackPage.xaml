@@ -248,7 +248,7 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="1" Margin="0,0,15,22" Width="428">
             <StackPanel Margin="25,0,6,0">
                 <CheckBox x:Name="print_cb"   VerticalAlignment="Center" HorizontalAlignment="Center" Margin="7,15,0,0" Foreground="#FF858484"/>
-                <Label Content="只打被选项" Foreground="#FF858484" Margin="0,-2,0,0"  />
+                <Label Content="打印选中项" Foreground="#FF858484" Margin="0,-2,0,0"  />
             </StackPanel>
             <Label Content="打印样式："  FontSize="15"   VerticalAlignment="Center" Foreground="#FF858484" Margin="5,0,0,0"/>
             <ComboBox  x:Name="template_combo" Canvas.Left="239" Canvas.Top="45" Height="35" Width="116" DisplayMemberPath="desc" SelectedValuePath="value"
