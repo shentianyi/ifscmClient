@@ -2,6 +2,7 @@
 bin/
 obj/
 TestResult/
+Brilliantech.MonoScmPrinter/Brilliantech.MonoScmPrinter.Client/p/
 
 
 ## Ignore Visual Studio temporary files, build results, and
