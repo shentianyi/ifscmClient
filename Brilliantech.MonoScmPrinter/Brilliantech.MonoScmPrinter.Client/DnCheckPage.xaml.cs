@@ -41,7 +41,6 @@ namespace Brilliantech.MonoScmPrinter.Client
         private void DnCheckPage_Loaded(object sender, RoutedEventArgs e)
         {
             restDelivery = new RestDelivery();
-            DnTB.Focus();
         }
 
         private void DnTB_KeyUp(object sender, KeyEventArgs e)
@@ -57,6 +56,7 @@ namespace Brilliantech.MonoScmPrinter.Client
                         new MsgBox(MsgLevel.Warning, dnKey + "不存在或已经被取消").ShowDialog();
                         PackListBox.ItemsSource = null;
                         PackTB.IsEnabled = false;
+                        DnTB.Text = "";
                     }
                     else
                     {
@@ -77,27 +77,31 @@ namespace Brilliantech.MonoScmPrinter.Client
         {
             try
             {
-                if (PackTB.Text.Trim().Length > 0 && e.Key == Key.Enter && !scanedPack.Contains(PackTB.Text))
+                if (PackTB.Text.Trim().Length > 0 && e.Key == Key.Enter)
                 {
-                    scanedPack.Add(PackTB.Text);
-                    List<DeliveryItemViewModel> items = PackListItems();
-                    DeliveryItemViewModel item = items.SingleOrDefault(i => i.key.Equals(PackTB.Text));
-                    ScanedNumLab.Text = (int.Parse(ScanedNumLab.Text.ToString()) + 1).ToString();
-                    if (item != null)
+                    if (!scanedPack.Contains(PackTB.Text))
                     {
-                        items.Remove(item);
-                        item.BorderColor = "#FF1297cf";
-                        item.IsScaned = true;
-                        item.BorderThickness = 2;
-                        items.Add(item);
-                        items.Sort();
-                        PackListBox.ItemsSource = null;
-                        PackListBox.ItemsSource = items;
-                        CorrectNumLab.Text = (int.Parse(CorrectNumLab.Text.ToString()) + 1).ToString();
-                    }
-                    else
-                    {
-                        WrongNumLab.Text = (int.Parse(WrongNumLab.Text.ToString()) + 1).ToString();
+                        scanedPack.Add(PackTB.Text);
+                        List<DeliveryItemViewModel> items = PackListItems();
+                        DeliveryItemViewModel item = items.SingleOrDefault(i => i.key.Equals(PackTB.Text));
+                        ScanedNumLab.Text = (int.Parse(ScanedNumLab.Text.ToString()) + 1).ToString();
+                        if (item != null)
+                        {
+                            items.Remove(item);
+                            item.BorderColor = "#FF1297cf";
+                            item.IsScaned = true;
+                            item.BorderThickness = 2;
+                            items.Add(item);
+                            items.Sort();
+                            PackListBox.ItemsSource = null;
+                            PackListBox.ItemsSource = items;
+                            CorrectNumLab.Text = (int.Parse(CorrectNumLab.Text.ToString()) + 1).ToString();
+                        }
+                        else
+                        {
+                            new MsgBox(MsgLevel.Warning, "此包装：" + PackTB.Text + "不属于此运单！").ShowDialog();
+                            WrongNumLab.Text = (int.Parse(WrongNumLab.Text.ToString()) + 1).ToString();
+                        }
                     }
                     PackTB.Text = "";
                 }

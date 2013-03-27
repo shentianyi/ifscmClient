@@ -28,9 +28,16 @@ namespace Brilliantech.MonoScmPrinter.Client
             user_tb.Text = loginInfo.staffNr;
         }
 
+
+        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            BodyFrame.Navigate(new IndexPage());
+        }
+
+
         private void MainPageTB_MouseUp(object sender, MouseButtonEventArgs e)
-        { 
-            
+        {
+            BodyFrame.Navigate(new IndexPage());            
         }
 
         private void logout_btn_Click(object sender, RoutedEventArgs e)
