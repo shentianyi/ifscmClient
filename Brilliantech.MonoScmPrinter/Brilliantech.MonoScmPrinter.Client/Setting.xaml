@@ -21,7 +21,7 @@
             <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
                 <Setter Property="MinHeight" Value="25"/>
                 <Setter Property="FontSize" Value="13"/>
-                <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+                <Setter Property="FontFamily" Value="微软雅黑"/>
                 <Setter Property="Background" Value="{DynamicResource GrayBrush7}"/>
                 <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}"/>
                 <Setter Property="Foreground" Value="#FF626262"/>

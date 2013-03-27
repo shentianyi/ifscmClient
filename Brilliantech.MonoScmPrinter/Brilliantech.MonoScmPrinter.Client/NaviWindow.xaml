@@ -4,7 +4,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         mc:Ignorable="d" x:Class="Brilliantech.MonoScmPrinter.Client.NaviWindow"
-        Title="SCMCLIENT" Height="650" Width="800" MinHeight="600" MinWidth="800" 
+        Title="SCMCLIENT" Height="650" Width="800" MinHeight="600" MinWidth="800"  
+        FontFamily="微软雅黑" 
 		ResizeMode="CanResizeWithGrip"
 		WindowStartupLocation="CenterScreen"
 		TitlebarHeight="55"
@@ -235,7 +236,7 @@
                 </Menu>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" d:LayoutOverrides="GridBox" Margin="395,0,0,0">
                     <Button x:Name="setting_btn" Cursor="Hand" Margin="0,0,4,0" Style="{DynamicResource ButtonStyle1}" Width="29.762" Click="setting_btn_Click" />
-                    <Label x:Name="setting_lb" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,0,35,0" FontSize="16"
+                    <Label x:Name="setting_lb" Cursor="Hand"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="-4,0,35,0" FontSize="16"
                        Foreground="#FF8D8D8D" Content="设置" MouseLeftButtonUp="setting_lb_MouseLeftButtonUp" />
                 </StackPanel>
             </StackPanel>
