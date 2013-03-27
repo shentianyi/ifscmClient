@@ -155,12 +155,12 @@
             <RowDefinition Height="0.819*"/>
         </Grid.RowDefinitions>
         <!--textbox in middle-->
-        <Label  Content="扫描运单号" Foreground="#FF9d9d9d" HorizontalAlignment="Left" Height="24.768" VerticalAlignment="Bottom" Width="75" Margin="89,0,0,0"/>
-        <TextBox  Margin="161,0,30,-1" FontSize="15" FontFamily="微软雅黑" Name="DnTB" KeyUp="DnTB_KeyUp" Focusable="True"
-                            VerticalAlignment="Bottom"  d:LayoutOverrides="VerticalAlignment"/>
-        <Label  Grid.Column="1" Content="扫描包装号" Foreground="#FF9d9d9d" HorizontalAlignment="Left" Width="86" Margin="29,0,0,-1.203" Height="25.971" 
+        <Label FontSize="13" Content="扫描运单号" Foreground="#FF9d9d9d" HorizontalAlignment="Left" Height="24.768" VerticalAlignment="Bottom" Width="75" Margin="82,0,0,0"/>
+        <TextBox  Margin="161,0,30,0" FontSize="15" FontFamily="微软雅黑" Name="DnTB" KeyUp="DnTB_KeyUp" Focusable="True"
+                            VerticalAlignment="Bottom"  />
+        <Label FontSize="13" Grid.Column="1" Content="扫描包装号" Foreground="#FF9d9d9d" HorizontalAlignment="Left" Width="86" Margin="29,0,0,-1.203" Height="25.971" 
                 VerticalAlignment="Bottom"/>
-        <TextBox  Grid.Column="1"  Margin="112.333,0,83.5,0" FontSize="15" FontFamily="微软雅黑" Name="PackTB" KeyUp="PackTB_KeyUp" IsEnabled="False" Focusable="True"
+        <TextBox  Grid.Column="1"  Margin="105,0,90,0" FontSize="15" FontFamily="微软雅黑" Name="PackTB" KeyUp="PackTB_KeyUp" IsEnabled="False" Focusable="True"
                          VerticalAlignment="Bottom" />
         <!--bottom left-->
  
@@ -169,8 +169,8 @@
             <Border BorderBrush="#FFeaedec" BorderThickness="3"   Width="330.253" Padding="5" Canvas.Right="5" Canvas.Top="23" Height="384"  >
             </Border>
 
-            <TextBlock Text="0" FontSize="75" Canvas.Right="170"  Foreground="#FF1297cf"  Canvas.Top="70"  Name="ScanedNumLab"/>
-            <TextBlock Text="0" FontSize="95" Canvas.Right="48"  Foreground="#FFeaedec"  Canvas.Top="165" Canvas.Left="215.08" Name="PackNumLab" />
+            <TextBlock Text="0" FontSize="85" Canvas.Right="159"  Foreground="#FF1297cf"  Canvas.Top="77"  Name="ScanedNumLab"/>
+            <TextBlock Text="0" FontSize="105" Canvas.Right="62"  Foreground="#FF9D9D9D"  Canvas.Top="183"  Name="PackNumLab" />
  
 
             <UniformGrid Rows="1" Columns="4" Canvas.Top="374" Canvas.Right="-16"  Width="186.253"> 
@@ -180,16 +180,9 @@
                 <TextBlock Text="0" FontSize="15" Foreground="#FFf34a4a" VerticalAlignment="Center" HorizontalAlignment="Left"  Name="WrongNumLab"/>
             </UniformGrid>
  
-            <Path Data="M269.856,91.106 L149.34124,211.62076" Fill="#FF9D9D9D" Height="137.974" Canvas.Right="100" Stretch="Fill" Stroke="#FFeaedec"  Width="156.031" StrokeThickness="3"  Canvas.Top="117"  RenderTransformOrigin="0.5,0.5" Canvas.Left="144.218"  >
-                <Path.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="2.003"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Path.RenderTransform>
-            </Path>
+            <Path Data="M269.856,91.106 L149.34124,211.62076" Fill="#FF9D9D9D" Height="64" Canvas.Right="68" Stretch="Fill" Stroke="#FF9d9d9d"  Width="186" StrokeThickness="3"  Canvas.Top="158"  RenderTransformOrigin="0.5,0.5"  />
+
+         
         </Canvas>
         <!--bottom right-->
         <ListBox Margin="22.5,15.5,83.5,95" Grid.Column="1" Grid.Row="1"  HorizontalContentAlignment="Stretch" Name="PackListBox" >
