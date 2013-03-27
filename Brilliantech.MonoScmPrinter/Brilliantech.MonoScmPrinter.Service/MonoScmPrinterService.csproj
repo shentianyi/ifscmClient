@@ -36,13 +36,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aliyun.OpenServices">
-      <HintPath>..\..\..\..\DLL\Aliyun.OpenServices.dll</HintPath>
+      <HintPath>D:\DLL\Aliyun.OpenServices.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\..\..\..\DLL\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>D:\DLL\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="Nini">
-      <HintPath>..\..\..\..\DLL\Nini.dll</HintPath>
+      <HintPath>D:\DLL\Nini.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,7 +53,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="TECIT.TFORMer, Version=6.0.3.0, Culture=neutral, PublicKeyToken=1b5f4306b234b83d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\File\DLL\TECIT.TFORMer.dll</HintPath>
+      <HintPath>D:\DLL\TECIT.TFORMer.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aliyun.OpenServices">
-      <HintPath>..\..\..\..\DLL\Aliyun.OpenServices.dll</HintPath>
+      <HintPath>D:\DLL\Aliyun.OpenServices.dll</HintPath>
     </Reference>
     <Reference Include="Nini">
-      <HintPath>..\..\..\..\DLL\Nini.dll</HintPath>
+      <HintPath>D:\DLL\Nini.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
