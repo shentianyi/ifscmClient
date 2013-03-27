@@ -67,16 +67,14 @@ namespace Brilliantech.MonoScmPrinter.Client
             openFileDialog.Multiselect = false;
             openFileDialog.Filter = "打印模版文件|*.tff";
             openFileDialog.Title = "选择打印模版";
-            //if ((bool)openFileDialog.ShowDialog())
-            //{
-            //    file_tb.Text = openFileDialog.FileName;
-            //}
         }
 
         private void confirm_btn_Click(object sender, RoutedEventArgs e)
         {
-            SaveSettings();
-            CloseWindow();
+            if (SaveSettings())
+            {
+                CloseWindow();
+            }
         }
 
 
@@ -88,7 +86,7 @@ namespace Brilliantech.MonoScmPrinter.Client
         {
             this.Close();
         }
-        private void SaveSettings()
+        private bool SaveSettings()
         {
             ReturnMsg<string> msg = new ReturnMsg<string>() { result = false };
             if (tabitem1.IsSelected)
@@ -96,27 +94,29 @@ namespace Brilliantech.MonoScmPrinter.Client
                 msg = new ReturnMsg<string>() { result = false };
                 try
                 {
-                    PrinterConfig.PrinterName = fax_combo.SelectedItem.ToString();
-                    PrinterConfig.Copy = int.Parse(number_page.Text);
-                    PrinterConfig.PrinterType = (PrinterType)int.Parse((faxtype_combo.SelectedItem as ComboBoxItem).Tag.ToString());
-                    PrinterConfig.SaveSettings();
-                    msg.result = true;
-                    msg.@object = "保存成功";
+                    int copy = PrinterConfig.Copy;
+                    if (int.TryParse(number_page.Text, out copy) && copy>0)
+                    {
+                        PrinterConfig.PrinterName = fax_combo.SelectedItem.ToString();
+                        PrinterConfig.Copy = copy;
+                        PrinterConfig.PrinterType = (PrinterType)int.Parse((faxtype_combo.SelectedItem as ComboBoxItem).Tag.ToString());
+                        PrinterConfig.SaveSettings();
+                        msg.result = true;
+                        msg.@object = "保存成功";
+                    }
+                    else {
+                        msg.result = false;
+                        msg.@object = "打印张数不合法！";
+                    }                
                 }
                 catch (Exception e)
                 {
                     msg.@object = e.Message;
                 }
             }
-            //else if (tabitem2.IsSelected)
-            //{
-            //    if (file_tb.Text.Length > 0)
-            //    {
-            //        msg = PrinterConfig.CopyTemplate(file_tb.Text);
-            //    }
-            //}
             MsgLevel level = msg.result ? MsgLevel.Successful : MsgLevel.Mistake;
             new MsgBox(level, msg.@object).ShowDialog();
+            return msg.result;
         }
     }
 }

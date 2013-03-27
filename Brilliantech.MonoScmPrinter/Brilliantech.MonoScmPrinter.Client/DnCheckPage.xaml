@@ -160,11 +160,8 @@
                             VerticalAlignment="Bottom"  />
         <Label FontSize="13" Grid.Column="1" Content="扫描包装号" Foreground="#FF9d9d9d" HorizontalAlignment="Left" Width="86" Margin="29,0,0,-1.203" Height="25.971" 
                 VerticalAlignment="Bottom"/>
-<<<<<<< HEAD
-        <TextBox  Grid.Column="1"  Margin="112.333,0,83.5,0" FontSize="15" FontFamily="微软雅黑" Name="PackTB" KeyUp="PackTB_KeyUp" IsEnabled="False" 
-=======
-        <TextBox  Grid.Column="1"  Margin="105,0,90,0" FontSize="15" FontFamily="微软雅黑" Name="PackTB" KeyUp="PackTB_KeyUp" IsEnabled="False" Focusable="True"
->>>>>>> 338ee26e915eea99994a0234cee6fc7de5a2b8d5
+
+        <TextBox  Grid.Column="1"  Margin="105,0,90,0" FontSize="15" FontFamily="微软雅黑" Name="PackTB" KeyUp="PackTB_KeyUp" IsEnabled="False"
                          VerticalAlignment="Bottom" />
         <!--bottom left-->
  
