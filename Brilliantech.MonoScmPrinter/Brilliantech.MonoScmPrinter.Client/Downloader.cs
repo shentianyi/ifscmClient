@@ -15,7 +15,7 @@ namespace Brilliantech.MonoScmPrinter.Client
             foreach (string file in files)
             {
                 AliOssUtil.DownLoadFile(BaseConfig.TemplateBucket, file,
-                     Path.Combine(AppDomain.CurrentDomain.BaseDirectory, PrinterConfig.TemplatePath, file));
+                     Path.Combine(AppDomain.CurrentDomain.BaseDirectory, SettingConfig.TemplatePath, file));
             }
         }
     }

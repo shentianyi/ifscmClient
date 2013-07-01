@@ -98,5 +98,21 @@ namespace Brilliantech.MonoScmPrinter.Client
             login_btn.IsEnabled = enable;
             login_probar.Visibility = enable ? Visibility.Hidden : Visibility.Visible;
         }
+
+        private void setting_btn_Click(object sender, RoutedEventArgs e)
+        {
+            ShowSettigDialog();
+        }
+
+
+        private void setting_lb_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            ShowSettigDialog();
+        }
+
+        private void ShowSettigDialog()
+        {
+            new PreSetting().ShowDialog();
+        }
     }
 }

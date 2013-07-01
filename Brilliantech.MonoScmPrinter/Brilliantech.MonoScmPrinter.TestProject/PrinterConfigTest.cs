@@ -74,7 +74,7 @@ namespace Brilliantech.MonoScmPrinter.TestProject
         {
             string sourceFileName = @"c:\id_rsa.pub"; 
             ReturnMsg<string> actual;
-            actual = PrinterConfig.CopyTemplate(sourceFileName);
+            actual = SettingConfig.CopyTemplate(sourceFileName);
             Assert.AreEqual(true, actual.result); 
         }
     }

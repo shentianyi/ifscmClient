@@ -13,13 +13,13 @@ namespace Brilliantech.MonoScmPrinter.ClientCL
     public class RestRequest
     {
         public static HttpWebRequest CreateWebRequest(string endpoint, string method, int content_length)
-        {            
+        {
             HttpWebRequest req = WebRequest.Create(endpoint) as HttpWebRequest;
             req.Method = method;
             req.ContentLength = content_length;
             req.Headers.Add("Authorization", Convert.ToBase64String(new System.Text.ASCIIEncoding().GetBytes("scmdddd")));
             req.ContentType = "application/x-www-form-urlencoded";
-            return req;
+            return NetProxy.SetHttpWebRequestProxy(req);
         }
 
         public static string GetResponse(HttpWebRequest req, byte[] bytes)
@@ -61,7 +61,7 @@ namespace Brilliantech.MonoScmPrinter.ClientCL
             int count = 0;
             foreach (var value in parameters)
             {
-                paramBuilder.AppendFormat("{0}={1}", value.Key, HttpUtility.UrlEncode(value.Value));
+                paramBuilder.AppendFormat("{0}={1}", value.Key, System.Uri.EscapeDataString(value.Value));
                 if (count != parameters.Count - 1)
                 {
                     paramBuilder.Append("&");

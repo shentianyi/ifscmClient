@@ -12,27 +12,19 @@ namespace Brilliantech.MonoScmPrinter.MethodTip
     {
         static void Main(string[] args)
         {
-           //             RecordSet rs = new RecordSet(); 
-           // RecordData rd = new RecordData();
-           // rd.Add("DNr", "2323");
-           // rd.Add("SendData","2323232");
-           // rs.Add(rd);
-           // rs.Add(rd);
-           //string s= JSON.stringify(rs);
-           //Console.WriteLine(s);
-            //string staffNr = "leoni55"; // TODO: 初始化为适当的值
-            //string pass = "leoni"; // TODO: 初始化为适当的值 
-            //ReturnMsg<LoginInfo> actual;
-            //IRestAuther auther = new RestAuther();
-            //actual = auther.Login(staffNr, pass); ;
-            ////Console.WriteLine(actual.@object.orgName);
-            //Console.WriteLine(actual.result);
+          
+            PingExample.PintIt("42.121.0.141");
             try
             {
-                new CException().DOException();
+                // new CException().DOException();
             }
-            catch (FieldAccessException e) {
+            catch (FieldAccessException e)
+            {
                 Console.Write(e.Message);
+            }
+            catch (Exception e) {
+                Console.Write(e.Message);
+            
             }
             Console.Read();
         }

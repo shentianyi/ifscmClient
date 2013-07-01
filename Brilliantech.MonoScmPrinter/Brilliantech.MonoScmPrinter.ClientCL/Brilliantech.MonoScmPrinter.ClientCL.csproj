@@ -10,10 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Brilliantech.MonoScmPrinter.ClientCL</RootNamespace>
     <AssemblyName>Brilliantech.MonoScmPrinter.ClientCL</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,7 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -61,8 +59,8 @@
     <Compile Include="Model\DeliveryPackage.cs" />
     <Compile Include="Model\PrintData.cs" />
     <Compile Include="Model\EnumItem.cs" />
+    <Compile Include="NetProxy.cs" />
     <Compile Include="ParameterHelper.cs" />
-    <Compile Include="PrinterConfig.cs" />
     <Compile Include="Model\LoginInfo.cs" />
     <Compile Include="Model\ReturnMsg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +69,7 @@
     <Compile Include="RestApis\RestDelivery.cs" />
     <Compile Include="RestApis\RestFile.cs" />
     <Compile Include="RestRequest.cs" />
+    <Compile Include="SettingConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Brilliantech.MonoScmPrinter.BaseCL\Brilliantech.MonoScmPrinter.BaseCL.csproj">

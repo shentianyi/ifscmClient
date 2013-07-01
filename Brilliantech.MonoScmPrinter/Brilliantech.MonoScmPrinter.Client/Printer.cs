@@ -16,7 +16,7 @@ namespace Brilliantech.MonoScmPrinter.Client
     {
         public static ReturnMsg<string> Print(PrintData data)
         {
-            string template = System.IO.Path.Combine(PrinterConfig.TemplatePath, data.template);
+            string template = System.IO.Path.Combine(SettingConfig.TemplatePath, data.template);
             if (!File.Exists(template))
             {
                 Downloader.DownLoadTemplate(new string[] { data.template });
@@ -24,9 +24,9 @@ namespace Brilliantech.MonoScmPrinter.Client
             IGenPrinter printer = new GenPrinter();
             ReportGenConfig printerConfig = new ReportGenConfig()
             {
-                NumberOfCopies = PrinterConfig.Copy,
-                Printer = PrinterConfig.PrinterName,
-                PrinterType = PrinterConfig.PrinterType,
+                NumberOfCopies = SettingConfig.Copy,
+                Printer = SettingConfig.PrinterName,
+                PrinterType = SettingConfig.PrinterType,
                 Template = template
             };
             return printer.Print(data.dataset, printerConfig);

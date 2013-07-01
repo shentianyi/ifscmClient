@@ -10,9 +10,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Brilliantech.MonoScmPrinter.MethodTip</RootNamespace>
     <AssemblyName>Brilliantech.MonoScmPrinter.MethodTip</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -60,7 +59,9 @@
     <Compile Include="CException.cs" />
     <Compile Include="InterfaceImp.cs" />
     <Compile Include="JsonString.cs" />
+    <Compile Include="NetProxy.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="PingExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticClass.cs" />

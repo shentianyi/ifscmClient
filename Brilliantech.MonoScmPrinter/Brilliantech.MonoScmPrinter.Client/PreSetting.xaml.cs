@@ -16,10 +16,10 @@ namespace Brilliantech.MonoScmPrinter.Client
     /// <summary>
     /// Setting.xaml 的交互逻辑
     /// </summary>
-    public partial class Setting : MetroWindow
+    public partial class PreSetting : MetroWindow
     {
 
-        public Setting()
+        public PreSetting()
         {
             InitializeComponent();
             LoadDefaultSettings();
@@ -28,27 +28,6 @@ namespace Brilliantech.MonoScmPrinter.Client
         {
             try
             {
-                foreach (string printer in PrinterSettings.InstalledPrinters)
-                    fax_combo.Items.Add(printer);
-                for (int i = 0; i < fax_combo.Items.Count; i++)
-                {
-                    if (fax_combo.Items[i].Equals(SettingConfig.PrinterName))
-                    {
-                        fax_combo.SelectedIndex = i;
-                        break;
-                    }
-                }
-
-                for (int i = 0; i < faxtype_combo.Items.Count; i++)
-                {
-                    if (int.Parse((faxtype_combo.Items[i] as ComboBoxItem).Tag.ToString()) == (int)SettingConfig.PrinterType)
-                    {
-                        faxtype_combo.SelectedIndex = i;
-                        break;
-                    }
-                }
-                number_page.Text = SettingConfig.Copy.ToString();
-
                 // proxy setting
                 switch (SettingConfig.NetProxyType) { 
                     case NetProxyType.NoProxy:
@@ -72,16 +51,7 @@ namespace Brilliantech.MonoScmPrinter.Client
         {
             CloseWindow();
         }
-
-
-        private void file_btn_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Multiselect = false;
-            openFileDialog.Filter = "打印模版文件|*.tff";
-            openFileDialog.Title = "选择打印模版";
-        }
-
+         
         private void confirm_btn_Click(object sender, RoutedEventArgs e)
         {
             if (SaveSettings())
@@ -104,26 +74,7 @@ namespace Brilliantech.MonoScmPrinter.Client
             ReturnMsg<string> msg = new ReturnMsg<string>() { result = false };
             try
             {
-                if (tabitem1.IsSelected)
-                {
-
-                    int copy = SettingConfig.Copy;
-                    if (int.TryParse(number_page.Text, out copy) && copy > 0)
-                    {
-                        SettingConfig.PrinterName = fax_combo.SelectedItem.ToString();
-                        SettingConfig.Copy = copy;
-                        SettingConfig.PrinterType = (PrinterType)int.Parse((faxtype_combo.SelectedItem as ComboBoxItem).Tag.ToString());
-                        SettingConfig.SavePrinterSettings();
-                        msg.result = true;
-                        msg.@object = "保存成功";
-                    }
-                    else
-                    {
-                        msg.result = false;
-                        msg.@object = "打印张数不合法！";
-                    }
-                }
-                else if (tabitem2.IsSelected)
+               if (tabitem1.IsSelected)
                 {
 
                     if ((bool)NoNetProxyRB.IsChecked)

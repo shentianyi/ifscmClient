@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brilliantech.MonoScmPrinter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brilliantech.MonoScmPrinter.Client", "Brilliantech.MonoScmPrinter.Client\Brilliantech.MonoScmPrinter.Client.csproj", "{3E9FA896-CED3-414F-A577-995368E4457A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brilliantech.ScmPrinterWindowsService", "Brilliantech.ScmPrinterWindowsService\Brilliantech.ScmPrinterWindowsService.csproj", "{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Brilliantech.MonoScmPrinter.vsmdi
@@ -120,6 +122,16 @@ Global
 		{3E9FA896-CED3-414F-A577-995368E4457A}.Release|Mixed Platforms.Build.0 = Release|x86
 		{3E9FA896-CED3-414F-A577-995368E4457A}.Release|x86.ActiveCfg = Release|x86
 		{3E9FA896-CED3-414F-A577-995368E4457A}.Release|x86.Build.0 = Release|x86
+		{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}.Debug|x86.ActiveCfg = Debug|x86
+		{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}.Debug|x86.Build.0 = Debug|x86
+		{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}.Release|Any CPU.ActiveCfg = Release|x86
+		{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}.Release|x86.ActiveCfg = Release|x86
+		{C50A39F1-16DD-46D6-BE0B-D21F8FB18AA4}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

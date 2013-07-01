@@ -93,10 +93,10 @@ namespace Brilliantech.MonoScmPrinter.TestProject
             IGenPrinter target = new GenPrinter();
             ReportGenConfig printerConfig = new ReportGenConfig()
             {
-                NumberOfCopies = PrinterConfig.Copy,
-                Printer = PrinterConfig.PrinterName,
-                PrinterType = PrinterConfig.PrinterType,
-                Template = Path.Combine(PrinterConfig.TemplatePath, data.template)
+                NumberOfCopies = SettingConfig.Copy,
+                Printer = SettingConfig.PrinterName,
+                PrinterType = SettingConfig.PrinterType,
+                Template = Path.Combine(SettingConfig.TemplatePath, data.template)
             };
 
             ReturnMsg<string> actual;

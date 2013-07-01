@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"              
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" x:Class="Brilliantech.MonoScmPrinter.Client.Setting"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" x:Class="Brilliantech.MonoScmPrinter.Client.PreSetting"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Custom="http://metro.mahapps.com/winfx/xaml/shared"
         xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" 
 		ShowIconOnTitleBar="True" WindowStartupLocation="CenterScreen" ShowInTaskbar="True"
@@ -452,28 +452,8 @@
                     </Grid>
                 </ControlTemplate>
             </TabControl.Template>
-            <TabItem Header="打印机设置" Style="{DynamicResource TabItemStyle1}" x:Name="tabitem1" IsSelected="True">
-                <Canvas >
-                    <Label Canvas.Left="109" Canvas.Top="44.959" Content="请选择打印机" Style="{StaticResource label}"/>
-                    <ComboBox  x:Name="fax_combo" Canvas.Left="239" Canvas.Top="45" Height="32" Width="213" Style="{DynamicResource ComboBoxStyle}" Margin="0"/>
-                    <Label Canvas.Left="109" Canvas.Top="98.934" Content="选择打印类型" Style="{StaticResource label}"/>
-                    <ComboBox  x:Name="faxtype_combo" Canvas.Left="239" Canvas.Top="99.371" Height="32" Width="213" Style="{DynamicResource ComboBoxStyle}" Margin="0">
-                        <ComboBoxItem IsSelected="True" Content="默认" Style="{DynamicResource SubComboBoxItemStyle}" Tag="0"/>
-                        <ComboBoxItem Content="斑马打印机" Style="{DynamicResource SubComboBoxItemStyle}" Tag="18"/>
-                    </ComboBox>
-                    <Label Canvas.Left="143" Canvas.Top="150.543" Content="打印张数" Style="{StaticResource label}"/>
-                    <TextBox x:Name="number_page" Height="26.437" Canvas.Left="239" Canvas.Top="155.543" Width="81" Text="1"
-                              FontFamily="微软雅黑" FontSize="14"   VerticalContentAlignment="Center"  VerticalAlignment="Bottom"  Foreground="#FF7A7A7A" />
-                </Canvas>
-            </TabItem>
-
-            <!--<TabItem Header="模板设置" Style="{DynamicResource TabItemStyle1}" x:Name="tabitem2">
-                <Canvas>
-                    <TextBox x:Name="file_tb" FontSize="14" Height="28.5" Canvas.Left="79.5" TextWrapping="Wrap" IsEnabled="False" VerticalContentAlignment="Center"  Canvas.Top="92.433" Width="334.5"/>
-                    <Button x:Name="file_btn" Content="选取模板" Height="28.5" Canvas.Left="436.5" Canvas.Top="92.433" Width="63" Style="{DynamicResource ButtonStyle1}" Padding="8,0" FontSize="12" Margin="0" Click="file_btn_Click" />
-                </Canvas>
-            </TabItem>-->
-            <TabItem Header="网络设置" Style="{DynamicResource TabItemStyle1}" x:Name="tabitem2">
+           
+            <TabItem Header="网络设置" Style="{DynamicResource TabItemStyle1}" x:Name="tabitem1">
                 <Canvas>
                     <RadioButton Canvas.Left="36" GroupName="ProxyType" Canvas.Top="36" IsChecked="True" Content="不使用代理" Height="26" Width="168" Name="NoNetProxyRB"  FontSize="17" Foreground="#FF9B9B9B"/>
                     <RadioButton Canvas.Left="36" Canvas.Top="69" GroupName="ProxyType" Content="使用浏览器设置"  Height="26" Width="150" Name="WebBrowserSettingProxyRB" FontSize="17"  Foreground="#FF9B9B9B"/>
