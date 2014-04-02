@@ -12,20 +12,8 @@ namespace Brilliantech.MonoScmPrinter.MethodTip
     {
         static void Main(string[] args)
         {
-          
-            PingExample.PintIt("42.121.0.141");
-            try
-            {
-                // new CException().DOException();
-            }
-            catch (FieldAccessException e)
-            {
-                Console.Write(e.Message);
-            }
-            catch (Exception e) {
-                Console.Write(e.Message);
-            
-            }
+
+            R.RR();
             Console.Read();
         }
 
