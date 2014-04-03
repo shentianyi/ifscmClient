@@ -97,6 +97,7 @@
             <Button Width="100" Content="排 产" HorizontalAlignment="Right"   Margin="0,0,20,0" Name="ScheduleBT" Click="ScheduleBT_Click" />
             <Button Width="100" Content="统 计" HorizontalAlignment="Right" Margin="0,0,20,0" Click="Button_Click" />
             <Button Width="100" Content="分 析" HorizontalAlignment="Right" Margin="0,0,20,0" Name="AnalyseBT" Click="AnalyseBT_Click" />
+            <Button Width="100" Content="配 套" HorizontalAlignment="Right" Margin="0,0,20,0" Name="BomsetBT" Click="BomsetBT_Click" />
         </DockPanel>
         <DockPanel Grid.Row="2">
             <Grid>

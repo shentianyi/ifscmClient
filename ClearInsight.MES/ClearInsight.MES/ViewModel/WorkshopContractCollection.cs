@@ -25,7 +25,7 @@ namespace ClearInsight.MES.ViewModel
                     WorkerAblityValue=r.Next(90,100).ToString(),
                     ProductAblityValue=r.Next(85,110).ToString(),
                     OEE=r.Next(80,98).ToString(),
-                    TEEP=r.Next(78,96).ToString()
+                    TEEP=r.Next(70,75).ToString()
                 });
             }
         }

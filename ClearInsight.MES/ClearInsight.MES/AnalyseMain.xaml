@@ -178,10 +178,6 @@
                                 <DataGridTextColumn Header="比例" Binding="{Binding Path=WorkTypeRate}"  /> 
                             </DataGrid.Columns>
                         </DataGrid>
-
-                        <ig:ItemLegend x:Name="Legend" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right"
-                       Margin="10" Padding="10,5,10,5" Canvas.Left="861" Canvas.Top="125" Height="215" Width="165" />
-
                         <ig:XamDataChart x:Name="CompareChart" Padding="0" Visibility="Visible" Legend="{Binding ElementName=Legend}"
                          HorizontalZoomable="False" HorizontalZoombarVisibility="Collapsed"
                          VerticalZoomable="False" VerticalZoombarVisibility="Collapsed" Margin="0,20,0,0"

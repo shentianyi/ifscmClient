@@ -75,5 +75,10 @@ namespace ClearInsight.MES
         {
             new AnalyseMain().ShowDialog();
         }
+
+        private void BomsetBT_Click(object sender, RoutedEventArgs e)
+        {
+            new BomSet().ShowDialog();
+        }
     }
 }
