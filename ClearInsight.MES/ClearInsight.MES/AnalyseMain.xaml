@@ -1,0 +1,145 @@
+﻿<Window x:Class="ClearInsight.MES.AnalyseMain"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AnalyseMain" Height="700" Width="1100"
+       xmlns:System="clr-namespace:System;assembly=mscorlib"
+      xmlns:ig="http://schemas.infragistics.com/xaml"
+        xmlns:models="clr-namespace:ClearInsight.MES.ViewModel"
+        xmlns:igWPF="http://schemas.infragistics.com/xaml/wpf">
+    <Window.Resources>
+        <ResourceDictionary>
+            <models:AnalyseCollection x:Key="AnalyseCollection1"/>
+            <models:AnalyseCollection x:Key="AnalyseCollection2"/>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" /> 
+            <RowDefinition Height="252*" />
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Frame Source="Header.xaml" DockPanel.Dock="Left" NavigationUIVisibility="Hidden"/>
+        </DockPanel>
+        <DockPanel Grid.Row="1">
+            <TabControl>
+                <TabItem  Header="产能分析"   x:Name="CapcityTab" IsSelected="True">
+                    <Canvas>
+                        <StackPanel HorizontalAlignment="Left" Grid.ColumnSpan="2" Width="142">
+                            <StackPanel>
+                                <Label Content="选择：" FontSize="15"/>
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="分厂" FontSize="15"/>
+                                <ComboBox Width="139" Name="BranchFactoryCB"
+                                                   SelectedIndex="0"   
+                          SelectedValuePath="ID" DisplayMemberPath="Name" SelectionChanged="BranchFactoryCB_SelectionChanged" />
+                            </StackPanel>
+                            <StackPanel>
+                                <Label Content="车间" FontSize="15"/>
+                                <ComboBox Width="139"  Name="WorkshopCB"  SelectedIndex="0" SelectedValuePath="ID" DisplayMemberPath="Name"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <ig:XamDataChart x:Name="DataChart1" Padding="0"  
+                        HorizontalZoomable="True"   
+                            VerticalZoomable="True"   
+                                     Width="461"   Height="204" Canvas.Left="166" Canvas.Top="28">
+                            
+                            <ig:XamDataChart.Axes>
+                                <ig:NumericXAxis x:Name="XAxis" MinimumValue="290" Interval="20" MaximumValue="420" Label="{}{} M" />
+                                <ig:CategoryYAxis x:Name="YAxis" ItemsSource="{StaticResource AnalyseCollection1}" Label="{}{Date}" />
+                            </ig:XamDataChart.Axes>
+                            <ig:XamDataChart.Series>
+                                <ig:BarSeries XAxis="{Binding ElementName=XAxis}" 
+                                YAxis="{Binding ElementName=YAxis}"  
+                                ItemsSource="{StaticResource AnalyseCollection1}" ValueMemberPath="Value" 
+                                  IsHighlightingEnabled="True" Title="Jack">
+                                   
+                                </ig:BarSeries>
+                            </ig:XamDataChart.Series>
+                        </ig:XamDataChart>
+                        <ig:XamEanUpcBarcode Canvas.Left="402" Canvas.Top="426" Name="xamEanUpcBarcode1" />
+                        <Label Canvas.Left="166" Canvas.Top="13" Content="同比生产" Height="28" Name="label1" />
+                        <ig:XamDataChart x:Name="DataChart2" Padding="0"  
+                        HorizontalZoomable="True"    DataContext="{StaticResource AnalyseCollection2}"
+                            VerticalZoomable="True"   
+                                     Width="461"   Height="204" Canvas.Left="166" Canvas.Top="265">
+                            
+                            <ig:XamDataChart.Axes>
+                                <ig:NumericXAxis x:Name="XXAxis" MinimumValue="290" Interval="20" MaximumValue="420" Label="{}{} M" />
+                                <ig:CategoryYAxis x:Name="YYAxis" ItemsSource="{StaticResource AnalyseCollection2}" Label="{}{Date}" />
+                            </ig:XamDataChart.Axes>
+                            <ig:XamDataChart.Series>
+                                <ig:BarSeries XAxis="{Binding ElementName=XXAxis}" 
+                                YAxis="{Binding ElementName=YYAxis}"  
+                                ItemsSource="{StaticResource AnalyseCollection2}" ValueMemberPath="Value" 
+                                  IsHighlightingEnabled="True" Title="Jack">
+
+                                </ig:BarSeries>
+                            </ig:XamDataChart.Series>
+                        </ig:XamDataChart>
+                        <Label Canvas.Left="168" Canvas.Top="245" Content="设备总产出同比" Height="28" Name="label2" />
+                        <DataGrid Name="DG1" Background="WhiteSmoke" IsReadOnly="True" SelectedIndex="-1" Grid.Row="1"
+                                      CanUserAddRows="False" CanUserDeleteRows="False" ScrollViewer.CanContentScroll="True" Height="180"
+                                      ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{StaticResource AnalyseCollection1}"
+                                      ClipboardCopyMode="IncludeHeader" AutoGenerateColumns="False" Canvas.Left="775" Canvas.Top="25">
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Foreground" Value="black"/>
+                                    <Setter Property="FontSize" Value="14" />
+                                    <Setter Property="Padding" Value="10,10,10,10"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="年度" Binding="{Binding Path=Date}"  />
+                                <DataGridTextColumn Header="产出" Binding="{Binding Path=Value}"  />
+                                <DataGridTextColumn Header="单位" Binding="{Binding Path=Unit}"  />
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <DataGrid Name="DG2" Background="WhiteSmoke" IsReadOnly="True" SelectedIndex="-1" Grid.Row="1"
+                                      CanUserAddRows="False" CanUserDeleteRows="False" ScrollViewer.CanContentScroll="True" Height="180"
+                                      ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{StaticResource AnalyseCollection2}"
+                                      ClipboardCopyMode="IncludeHeader" AutoGenerateColumns="False" Canvas.Left="767" Canvas.Top="303">
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Foreground" Value="black"/>
+                                    <Setter Property="FontSize" Value="14" />
+                                    <Setter Property="Padding" Value="10,10,10,10"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="年度" Binding="{Binding Path=Date}"  />
+                                <DataGridTextColumn Header="产量" Binding="{Binding Path=Value}"  />
+                                <DataGridTextColumn Header="单位" Binding="{Binding Path=Unit}"  />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <StackPanel  Canvas.Left="186" Canvas.Top="480" >
+                            <Label Content="额定产能"   />
+                            <Label Content="2,600,000"/>
+                        </StackPanel>
+                        
+                        <StackPanel  Canvas.Left="286" Canvas.Top="480" >
+                        <Label Content="预测产能"   />
+                           <Label Content="2,600,000"/> 
+                        </StackPanel>
+
+                        <StackPanel  Canvas.Left="396" Canvas.Top="480" >
+                            <Label Content="增长率"   />
+                            <Label Content="20%"/>
+                        </StackPanel>
+
+                      
+                    </Canvas>
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+        <DockPanel Grid.Row="2">
+            <Frame Source="Footer.xaml" DockPanel.Dock="Left" NavigationUIVisibility="Hidden"/>
+        </DockPanel>
+    </Grid>
+</Window>

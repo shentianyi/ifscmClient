@@ -70,5 +70,10 @@ namespace ClearInsight.MES
         {
             new Schedule().ShowDialog();
         }
+
+        private void AnalyseBT_Click(object sender, RoutedEventArgs e)
+        {
+            new AnalyseMain().ShowDialog();
+        }
     }
 }

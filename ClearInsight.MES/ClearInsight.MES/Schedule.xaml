@@ -112,7 +112,7 @@
                     <StackPanel Orientation="Horizontal">
                         <Label Content="分厂" FontSize="15"/>
                         <ComboBox Width="139" Name="BranchFactoryCB"
-                                                   SelectedIndex="0"   SelectedValuePath="ID" DisplayMemberPath="Name"/>
+                                                   SelectedIndex="0"   SelectedValuePath="ID" DisplayMemberPath="Name" SelectionChanged="BranchFactoryCB_SelectionChanged" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Label Content="车间" FontSize="15"/>

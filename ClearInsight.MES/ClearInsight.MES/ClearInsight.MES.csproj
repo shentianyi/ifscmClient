@@ -36,6 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="InfragisticsWPF4.Controls.Barcodes.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="InfragisticsWPF4.Controls.Charts.XamDataChart.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="InfragisticsWPF4.Controls.Editors.XamCalendar.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="InfragisticsWPF4.Controls.Timelines.XamTimeline.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
@@ -68,6 +69,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AnalyseMain.xaml.cs">
+      <DependentUpon>AnalyseMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ContractDetail.xaml.cs">
       <DependentUpon>ContractDetail.xaml</DependentUpon>
     </Compile>
@@ -77,6 +81,7 @@
     <Compile Include="ScheduleAnalyse.xaml.cs">
       <DependentUpon>ScheduleAnalyse.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AnalyseCollection.cs" />
     <Compile Include="ViewModel\BranchFactory.cs" />
     <Compile Include="ViewModel\ContractRecord.cs" />
     <Compile Include="ViewModel\EntityBase.cs" />
@@ -86,6 +91,10 @@
     <Compile Include="ViewModel\ScheduleFailCollection.cs" />
     <Compile Include="ViewModel\Workshop.cs" />
     <Compile Include="ViewModel\WorkshopPlanCollection.cs" />
+    <Page Include="AnalyseMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ContractDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
