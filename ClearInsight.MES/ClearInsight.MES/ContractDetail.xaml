@@ -1,0 +1,82 @@
+﻿<Window x:Class="ClearInsight.MES.ContractDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ContractDetail" Height="650" Width="900"
+         xmlns:models="clr-namespace:ClearInsight.MES.ViewModel" xmlns:ig="http://schemas.infragistics.com/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="520"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Frame Source="Header.xaml" DockPanel.Dock="Left" NavigationUIVisibility="Hidden"/>
+        </DockPanel>
+        <DockPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+            <StackPanel Width="98">
+                    <Label Content="合 同"/>
+                    <ListBox Name="ContractLB" AllowDrop="True" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="ContractLB_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical"> 
+                                    <TextBlock >
+                                        <TextBlock.Text>
+                                            <Binding Path="Nr"/>
+                                        </TextBlock.Text>
+                                    </TextBlock > 
+                                    <TextBlock HorizontalAlignment="Right" Foreground="Red" >
+                                        <TextBlock.Text>
+                                            <Binding Path="State"/>
+                                        </TextBlock.Text>
+                                    </TextBlock >
+                                </StackPanel>
+                            </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+                <StackPanel Width="778">
+                    <Grid  Width="Auto">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="50*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Height="60" Grid.Row="0">
+                            <StackPanel  Margin="10,0,0,0">
+                                <Label Content="订单状态"/>
+                                <Label Name="StateL"/>
+                            </StackPanel>
+                            <StackPanel  Margin="10,0,0,0">
+                                <Label Content="排单时间"/>
+                                <Label Name="TimeL"/>
+                            </StackPanel>
+                            <StackPanel  Margin="10,0,0,0">
+                                    <Label Content="排单人员"/>
+                                    <Label Name="ArrangeStaffL" />
+                                </StackPanel>
+                            </StackPanel>
+                        <StackPanel Grid.Row="1" Height="200">
+                           <DataGrid />
+                        </StackPanel>
+                        <StackPanel Grid.Row="2"   >
+
+                            <!--#BEGIN SNIPPET#-->
+                            <ig:XamTimeline x:Name="timeline" Width="716"  Height="254" Margin="0,10,0,0">
+                                <ig:XamTimeline.Axis>
+                                    <ig:DateTimeAxis ShowThumb="False" ScrollScale=".60" />
+                                </ig:XamTimeline.Axis>
+                            </ig:XamTimeline>
+                            <!--#END SNIPPET#-->
+
+
+                        </StackPanel>
+                </Grid>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+        <DockPanel Grid.Row="2">
+            <Frame Source="Footer.xaml" DockPanel.Dock="Left" NavigationUIVisibility="Hidden"/>
+        </DockPanel>
+    </Grid>
+</Window>

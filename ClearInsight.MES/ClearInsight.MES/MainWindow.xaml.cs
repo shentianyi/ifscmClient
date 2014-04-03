@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClearInsight.MES.ViewModel;
+using Infragistics;
 
 
 namespace ClearInsight.MES
@@ -23,11 +25,37 @@ namespace ClearInsight.MES
         public MainWindow()
         {
             InitializeComponent();
+            init();
+            InitializeCharts();
         }
 
-        private void Label_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
+        private void init() {
+            BranchFactoryCB.ItemsSource = BranchFactory.GetSource();
+            WorkshopCB.ItemsSource = Workshop.GetSource((int)BranchFactoryCB.SelectedValue);
+            StartDP.SelectedDate = DateTime.Now.AddDays(-6);
+        }
 
+        private void BranchFactoryCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            WorkshopCB.ItemsSource = Workshop.GetSource((int)BranchFactoryCB.SelectedValue);
+            WorkshopCB.SelectedIndex = 0;
+        }
+
+
+        private void InitializeCharts()
+        {
+            BrushCollection brushes = this.Resources["ChartBrushes"] as BrushCollection;
+            BrushCollection outlines = this.Resources["ChartOutlines"] as BrushCollection;
+
+            this.DataChart.Brushes = brushes;
+            this.DataChart.Outlines = outlines;
+            this.DataChart.MarkerBrushes = brushes;
+            this.DataChart.MarkerOutlines = outlines;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new ContractDetail().ShowDialog();
         }
     }
 }
