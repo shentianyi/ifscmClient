@@ -39,6 +39,10 @@
                                     SelectedDateFormat="Short" FirstDayOfWeek="Monday">
                         </DatePicker>
                     </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="原因" FontSize="15"/>
+                        <ComboBox Name="ReasonCB" SelectedValuePath="ID" DisplayMemberPath="Name" Width="156" SelectionChanged="ReasonCB_SelectionChanged" />
+                    </StackPanel>
                 </StackPanel>
                 <StackPanel Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal" Width="878">
                     <ig:XamDataChart x:Name="DataChart" Padding="0" Visibility="Visible"

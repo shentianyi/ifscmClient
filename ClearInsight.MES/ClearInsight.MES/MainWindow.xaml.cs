@@ -65,5 +65,10 @@ namespace ClearInsight.MES
         {
             new ContractDetail().ShowDialog();
         }
+
+        private void ScheduleBT_Click(object sender, RoutedEventArgs e)
+        {
+            new Schedule().ShowDialog();
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿<Window x:Class="ClearInsight.MES.MainWindow"
+﻿<Window x:Class="ClearInsight.MES.Schedule"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="700" Width="1100"
@@ -83,7 +83,7 @@
         </ResourceDictionary>
     </Window.Resources>
 
-        <Grid>
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30*" />
             <RowDefinition Height="20*"/>
@@ -91,11 +91,13 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0">
-            <Frame Source="Header.xaml" DockPanel.Dock="Left" NavigationUIVisibility="Hidden"/>        
+            <Frame Source="Header.xaml" DockPanel.Dock="Left" NavigationUIVisibility="Hidden"/>
         </DockPanel>
-        <DockPanel Grid.Row="1" HorizontalAlignment="Right">
-            <Button Width="100" Content="排 产" HorizontalAlignment="Right"   Margin="0,0,20,0" Name="ScheduleBT" Click="ScheduleBT_Click" />
-            <Button Width="100" Content="统 计" HorizontalAlignment="Right" Margin="0,0,20,0" Click="Button_Click" />
+        <DockPanel Grid.Row="1" HorizontalAlignment="Left" Width="210">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="合同号"/>
+                <TextBox Width="422" />
+            </StackPanel>
         </DockPanel>
         <DockPanel Grid.Row="2">
             <Grid>
@@ -108,31 +110,28 @@
                         <Label Content="选择：" FontSize="15"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="分厂" FontSize="15"/><ComboBox Width="139" Name="BranchFactoryCB"
-                                                   SelectedIndex="0"   SelectedValuePath="ID" DisplayMemberPath="Name" SelectionChanged="BranchFactoryCB_SelectionChanged" />
+                        <Label Content="分厂" FontSize="15"/>
+                        <ComboBox Width="139" Name="BranchFactoryCB"
+                                                   SelectedIndex="0"   SelectedValuePath="ID" DisplayMemberPath="Name"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Label Content="车间" FontSize="15"/>
                         <ComboBox Width="139"  Name="WorkshopCB"  SelectedIndex="0" SelectedValuePath="ID" DisplayMemberPath="Name"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="开始时间" FontSize="15"/>
-                        <DatePicker x:Name="StartDP" Width="150" Height="25"  SelectedDateFormat="Short"
+                        <Label Content="选择时间" FontSize="15"/>
+                        <DatePicker x:Name="StartDP" Width="150" Height="25"  SelectedDateFormat="Short" SelectedDate="{x:Static System:DateTime.Now}" 
                                    FirstDayOfWeek="Monday">
                         </DatePicker>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="结束时间" FontSize="15"/>
-                        <DatePicker x:Name="EndDP" Width="150" Height="25"   SelectedDate="{x:Static System:DateTime.Now}" 
-                                    SelectedDateFormat="Short" FirstDayOfWeek="Monday">
-                        </DatePicker>
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Grid.Row="1" >
-                    <ig:XamDataChart x:Name="DataChart" Padding="0" Visibility="Visible"
+                    <StackPanel Orientation="Horizontal"></StackPanel>
+                </StackPanel> 
+                    <DockPanel Grid.Row="1" HorizontalAlignment="Left" Width="1043">
+                    <StackPanel>
+                        <ig:XamDataChart x:Name="DataChart" Padding="0" Visibility="Visible"
                          HorizontalZoomable="False" HorizontalZoombarVisibility="Collapsed"
                          VerticalZoomable="False" VerticalZoombarVisibility="Collapsed"
-                                     Width="Auto"   Height="489" >
+                                     Width="956"   Height="489" >
                         <ig:XamDataChart.Resources>
                             <models:WorkshopContractCollection x:Key="WorkshopContractCollection" />
                         </ig:XamDataChart.Resources>
@@ -140,29 +139,26 @@
                             <ig:NumericYAxis x:Name="YAxis" MinimumValue="0" Interval="10" Label="{}{} TT" />
                             <ig:CategoryXAxis x:Name="XAxis" ItemsSource="{StaticResource WorkshopContractCollection}" Label="{}{Date}" />
                         </ig:XamDataChart.Axes>
-                        <ig:XamDataChart.Series> 
+                        <ig:XamDataChart.Series>
                             <ig:StackedColumnSeries XAxis="{Binding ElementName=XAxis}" 
                                 YAxis="{Binding ElementName=YAxis}"  
-                                ItemsSource="{StaticResource WorkshopContractCollection}" MouseLeftButtonUp="StackedColumnSeries_MouseLeftButtonUp">
+                                ItemsSource="{StaticResource WorkshopContractCollection}">
                                 <ig:StackedColumnSeries.Series>
                                     <ig:StackedFragmentSeries ValueMemberPath="OriValue" Title="OriValue" />
                                     <ig:StackedFragmentSeries ValueMemberPath="MoveupValue" Title="MoveupValue" />
-                                    <ig:StackedFragmentSeries ValueMemberPath="MovedownValue" Title="MovedownValue" /> 
+                                    <ig:StackedFragmentSeries ValueMemberPath="MovedownValue" Title="MovedownValue" />
                                 </ig:StackedColumnSeries.Series>
                             </ig:StackedColumnSeries>
-                            <ig:LineSeries ItemsSource="{StaticResource WorkshopContractCollection}" ValueMemberPath="ContractValue"  
-                       Title="ContractValue" MarkerType="None" Thickness="3"
-                       XAxis="{Binding ElementName=XAxis}" 
-                       YAxis="{Binding ElementName=YAxis}">
-                            </ig:LineSeries>
-                            <ig:LineSeries ItemsSource="{StaticResource WorkshopContractCollection}" ValueMemberPath="PredictValue"  
-                       Title="PredictValue" MarkerType="None" Thickness="3"
-                       XAxis="{Binding ElementName=XAxis}" 
-                       YAxis="{Binding ElementName=YAxis}">
-                            </ig:LineSeries>
                         </ig:XamDataChart.Series>
                     </ig:XamDataChart>
-                </StackPanel>
+                    </StackPanel>
+                    <StackPanel>
+                        <Button Content="查看占用" Name="ShowContractDetailBT" Height="51" Width="83" Click="ShowContractDetailBT_Click" />
+                        <Button Content="试排入" Name="PrePublishBT" Height="51" Width="83" />
+                        <Button Content="发布" Name="PublishBT" Height="51" Width="83" />
+                    </StackPanel>
+                </DockPanel>
+                
             </Grid>
         </DockPanel>
         <DockPanel Grid.Row="3">
