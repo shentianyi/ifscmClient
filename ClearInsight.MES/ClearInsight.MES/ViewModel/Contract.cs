@@ -23,7 +23,7 @@ namespace ClearInsight.MES.ViewModel
             List<Contract> contracts = new List<Contract>();
             Random r = new Random();
             DateTime date = DateTime.Now;
-            for (int i = 100; i < 130; i++)
+            for (int i = 0; i < 30; i++)
             {
                 contracts.Add(new Contract()
                 {
@@ -32,7 +32,7 @@ namespace ClearInsight.MES.ViewModel
                     ArrangeStaff = "Jack",
                     Value = r.Next(80, 150).ToString(),
                     Time = date.AddDays(i - 7).AddHours(r.Next(4, 8)).AddMinutes(r.Next(10, 30)).ToString(),
-                    State = status[r.Next(0, 3)]
+                    State = status[i/10]
                 });
             }
             return contracts;
