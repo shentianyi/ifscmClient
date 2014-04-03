@@ -29,7 +29,7 @@ namespace ClearInsight.MES.ViewModel
                 {
                     ID = i,
                     Nr = "C201404" + i.ToString(),
-                    ArrangeStaff = "Jack",
+                    ArrangeStaff = "排产员A",
                     Value = r.Next(80, 150).ToString(),
                     Time = date.AddDays(i - 7).AddHours(r.Next(4, 8)).AddMinutes(r.Next(10, 30)).ToString(),
                     State = status[i/10]

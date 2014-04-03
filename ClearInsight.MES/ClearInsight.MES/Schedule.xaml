@@ -130,6 +130,7 @@
                         <ig:XamDataChart x:Name="DataChart" Padding="0" Visibility="Visible"
                          HorizontalZoomable="False" HorizontalZoombarVisibility="Collapsed" Margin="10,40,10,10"
                          VerticalZoomable="False" VerticalZoombarVisibility="Collapsed"
+                                         Title="合同详情表"
                                      Width="670"   Height="438" >
                         <ig:XamDataChart.Resources>
                             <models:WorkshopContractCollection x:Key="WorkshopContractCollection" />
@@ -169,7 +170,7 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <Button Content="查看占用" Name="ShowContractDetailBT" Height="51" Width="83" Click="ShowContractDetailBT_Click" Canvas.Left="920" Canvas.Top="418" />
-                        <Button Content="试排入" Name="PrePublishBT" Height="51" Width="83" Canvas.Left="814" Canvas.Top="418" />
+                        <Button Content="试排入" Name="PrePublishBT" Height="51" Width="83" Canvas.Left="814" Canvas.Top="418" Click="PrePublishBT_Click" />
                         <Button Content="发布" Name="PublishBT" Height="51" Width="83" Canvas.Left="707" Canvas.Top="418" Click="PublishBT_Click" />
                 </Canvas>
                 

@@ -134,7 +134,7 @@
                     <ig:XamDataChart x:Name="DataChart" Padding="0" Visibility="Visible"
                          HorizontalZoomable="False" HorizontalZoombarVisibility="Collapsed"
                          VerticalZoomable="False" VerticalZoombarVisibility="Collapsed"
-                                     Width="Auto"   Height="489" >
+                                     Width="Auto"   Height="489" PlotAreaMinWidth="10" WindowRect="0,0,1,1">
                         <ig:XamDataChart.Resources>
                             <models:WorkshopContractCollection x:Key="WorkshopContractCollection" />
                         </ig:XamDataChart.Resources>
@@ -147,18 +147,18 @@
                                 YAxis="{Binding ElementName=YAxis}"  
                                 ItemsSource="{StaticResource WorkshopContractCollection}" MouseLeftButtonUp="StackedColumnSeries_MouseLeftButtonUp">
                                 <ig:StackedColumnSeries.Series>
-                                    <ig:StackedFragmentSeries ValueMemberPath="OriValue" Title="OriValue" />
+                                    <ig:StackedFragmentSeries ValueMemberPath="OriValue" Title="OriValue"/>
                                     <ig:StackedFragmentSeries ValueMemberPath="MoveupValue" Title="MoveupValue" />
                                     <ig:StackedFragmentSeries ValueMemberPath="MovedownValue" Title="MovedownValue" /> 
                                 </ig:StackedColumnSeries.Series>
                             </ig:StackedColumnSeries>
                             <ig:LineSeries ItemsSource="{StaticResource WorkshopContractCollection}" ValueMemberPath="ContractValue"  
-                       Title="ContractValue" MarkerType="None" Thickness="3"
+                       Title="ContractValue" MarkerType="None" Thickness="3" ToolTip="额定产能线" 
                        XAxis="{Binding ElementName=XAxis}" 
                        YAxis="{Binding ElementName=YAxis}">
                             </ig:LineSeries>
                             <ig:LineSeries ItemsSource="{StaticResource WorkshopContractCollection}" ValueMemberPath="PredictValue"  
-                       Title="PredictValue" MarkerType="None" Thickness="3"
+                       Title="PredictValue" MarkerType="None" Thickness="3" ToolTip="智能预测线"
                        XAxis="{Binding ElementName=XAxis}" 
                        YAxis="{Binding ElementName=YAxis}">
                             </ig:LineSeries>

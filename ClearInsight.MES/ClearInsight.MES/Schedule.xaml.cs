@@ -48,5 +48,23 @@ namespace ClearInsight.MES
         {
             MessageBox.Show("发布成功！");
         }
+
+        private void PrePublishBT_Click(object sender, RoutedEventArgs e)
+        {
+            Random r = new Random();
+            int i = r.Next(0, 3);
+            if (i == 0)
+            {
+                MessageBox.Show("试排无警告，可进行发布");
+            }
+            else if (i == 1)
+            {
+                MessageBox.Show("库存不足，请核实数据");
+            }
+            else {
+
+                MessageBox.Show("产能不足，请核实数据");
+            }
+        }
     }
 }

@@ -24,6 +24,10 @@ namespace ClearInsight.MES
         {
             InitializeComponent();
             ContractLB.ItemsSource = Contract.GetSource();
+            if (ContractLB.Items.Count > 0) {
+                ContractLB.SelectedIndex = 0;
+                ContractLB_SelectionChanged(null,null);
+            }
             this.Loaded += OnSampleLoaded;
         }
 
