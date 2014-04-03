@@ -1,0 +1,34 @@
+﻿<Window x:Class="ClearInsight.MES.OEELine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OEELine" Height="326" Width="990"
+       xmlns:System="clr-namespace:System;assembly=mscorlib"
+      xmlns:ig="http://schemas.infragistics.com/xaml"
+        xmlns:models="clr-namespace:ClearInsight.MES.ViewModel"
+        xmlns:igWPF="http://schemas.infragistics.com/xaml/wpf">
+    <Grid Height="247">
+        <ig:XamDataChart x:Name="DataChart" Padding="0" Visibility="Visible" Title="OEE与TEEP对比图"
+                         HorizontalZoomable="False" HorizontalZoombarVisibility="Collapsed"
+                         VerticalZoomable="False" VerticalZoombarVisibility="Collapsed" Margin="9,0,25,2">
+            <ig:XamDataChart.Resources>
+                <models:WorkshopContractCollection x:Key="WorkshopContractCollection" />
+            </ig:XamDataChart.Resources>
+            <ig:XamDataChart.Axes>
+                <ig:NumericYAxis x:Name="YAxis" MinimumValue="60" MaximumValue="100" Interval="5" Label="{}{}" />
+                <ig:CategoryXAxis x:Name="XAxis" ItemsSource="{StaticResource WorkshopContractCollection}" Label="{}{Date}" />
+            </ig:XamDataChart.Axes>
+            <ig:XamDataChart.Series>
+                <ig:LineSeries ItemsSource="{StaticResource WorkshopContractCollection}" ValueMemberPath="OEE"   ToolTip="OEE"
+                       Title="OEE" MarkerType="None" Thickness="3"
+                       XAxis="{Binding ElementName=XAxis}" 
+                       YAxis="{Binding ElementName=YAxis}">
+                </ig:LineSeries>
+                <ig:LineSeries ItemsSource="{StaticResource WorkshopContractCollection}" ValueMemberPath="TEEP"   ToolTip="TEEP"
+                       Title="TEEP" MarkerType="None" Thickness="3"
+                       XAxis="{Binding ElementName=XAxis}" 
+                       YAxis="{Binding ElementName=YAxis}">
+                </ig:LineSeries>
+            </ig:XamDataChart.Series>
+        </ig:XamDataChart>
+    </Grid>
+</Window>

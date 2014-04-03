@@ -49,5 +49,7 @@ namespace ClearInsight.MES.ViewModel
         public string PredictValue { get; set; }
         public string WorkerAblityValue { get; set; }
         public string ProductAblityValue { get; set; }
+        public string OEE { get; set; }
+        public string TEEP { get; set; }
     }
 }
