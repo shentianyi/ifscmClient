@@ -27,8 +27,10 @@ namespace ClearInsight.MES
 
         private void init()
         {
+            StartDP.SelectedDate = DateTime.Now.AddDays(-6);
             BranchFactoryCB.ItemsSource = BranchFactory.GetSource();
-            WorkshopCB.ItemsSource = Workshop.GetSource((int)BranchFactoryCB.SelectedValue); 
+            WorkshopCB.ItemsSource = Workshop.GetSource((int)BranchFactoryCB.SelectedValue);
+            pieChart.ItemsSource=dataGrid1.ItemsSource = HumanResouce.GetPieSumData();
         }
 
         private void BranchFactoryCB_SelectionChanged(object sender, SelectionChangedEventArgs e)

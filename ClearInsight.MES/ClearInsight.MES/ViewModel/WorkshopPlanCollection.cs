@@ -21,7 +21,9 @@ namespace ClearInsight.MES.ViewModel
                     MoveupValue = r.Next(0, 20).ToString(),
                     MovedownValue = r.Next(0, 30).ToString(),
                     ContractValue = r.Next(90, 160).ToString(),
-                    PredictValue = r.Next(95, 150).ToString()
+                    PredictValue = r.Next(95, 150).ToString(),
+                    WorkerAblityValue=r.Next(90,100).ToString(),
+                    ProductAblityValue=r.Next(85,110).ToString()
                 });
             }
         }

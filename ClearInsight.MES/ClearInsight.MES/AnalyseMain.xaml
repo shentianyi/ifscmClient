@@ -136,6 +136,89 @@
                       
                     </Canvas>
                 </TabItem>
+
+                <TabItem  Header="人力产能"   x:Name="HumanResourceTab">
+                    <Canvas>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="开始时间" FontSize="15"/>
+                            <DatePicker x:Name="StartDP" Width="150" Height="25"  SelectedDateFormat="Short"
+                                   FirstDayOfWeek="Monday">
+                            </DatePicker>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal" Canvas.Top="40"></StackPanel>
+                        <ig:XamPieChart Name="pieChart" 
+                LabelMemberPath="WorkType"
+                ValueMemberPath="Value" 
+                LabelExtent="20"  
+                                        LabelsPosition="BestFit"
+                       
+                        ToolTip="{}{WorkType}:{Value}"
+                                        
+                LeaderLineVisibility="Visible" Canvas.Left="6" Canvas.Top="40" Height="292" Width="376">
+                           
+                        </ig:XamPieChart>
+                        <DatePicker x:Name="EndDP" Width="150" Height="25" SelectedDate="{x:Static System:DateTime.Now}" SelectedDateFormat="Short" FirstDayOfWeek="Monday" Canvas.Left="316" Canvas.Top="6"></DatePicker>
+                        <Label Content="结束时间" FontSize="15" Canvas.Left="226" Canvas.Top="2" />
+                        <DataGrid AutoGenerateColumns="False" Canvas.Left="512" Canvas.Top="17" Height="212" Name="dataGrid1" Background="WhiteSmoke" IsReadOnly="True" SelectedIndex="-1"  
+                                      CanUserAddRows="False" CanUserDeleteRows="False" ScrollViewer.CanContentScroll="True" 
+                                      ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                      ClipboardCopyMode="IncludeHeader"   Width="273">
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Foreground" Value="black"/>
+                                    <Setter Property="FontSize" Value="14" />
+                                    <Setter Property="Padding" Value="10,10,10,10"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="入职时间" Binding="{Binding Path=WorkType}"  />
+                                <DataGridTextColumn Header="人数" Binding="{Binding Path=Value}"  />
+                                <DataGridTextColumn Header="比例" Binding="{Binding Path=WorkTypeRate}"  /> 
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <ig:ItemLegend x:Name="Legend" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right"
+                       Margin="10" Padding="10,5,10,5" Canvas.Left="861" Canvas.Top="125" Height="215" Width="165" />
+
+                        <ig:XamDataChart x:Name="CompareChart" Padding="0" Visibility="Visible" Legend="{Binding ElementName=Legend}"
+                         HorizontalZoomable="False" HorizontalZoombarVisibility="Collapsed"
+                         VerticalZoomable="False" VerticalZoombarVisibility="Collapsed" Margin="0,20,0,0"
+                                     Width="953"   Height="180" Title="产能与人员熟练度比较曲线" Canvas.Left="100" Canvas.Top="318">
+                            <ig:XamDataChart.Resources>
+                                <models:WorkshopContractCollection x:Key="WorkshopContractCollection" />
+                            </ig:XamDataChart.Resources>
+                            <ig:XamDataChart.Axes>
+
+                                <ig:NumericYAxis x:Name="WorkerAblityYAxis"  Label="{} {}" Visibility="Visible" MinimumValue="80">
+                                    <ig:NumericYAxis.LabelSettings>
+                                        <ig:AxisLabelSettings Location="OutsideLeft" Extent="55" Visibility="Visible"/>
+                                    </ig:NumericYAxis.LabelSettings>
+                                </ig:NumericYAxis>
+                                <ig:NumericYAxis x:Name="ProductAblityYAxis"  Label="{} {} " MinimumValue="80">
+                                    <ig:NumericYAxis.LabelSettings>
+                                        <ig:AxisLabelSettings Location="OutsideRight" Extent="55" Visibility="Visible" />
+                                    </ig:NumericYAxis.LabelSettings>
+                                </ig:NumericYAxis>
+                                <ig:CategoryXAxis x:Name="XXXAxis" ItemsSource="{StaticResource WorkshopContractCollection}" Label="{}{Date}" />
+                            </ig:XamDataChart.Axes>
+                            <ig:XamDataChart.Series>
+                                <ig:LineSeries ItemsSource="{StaticResource WorkshopContractCollection}" ValueMemberPath="WorkerAblityValue"  
+                       Title="WorkerAblityValue" MarkerType="None" Thickness="3"
+                       XAxis="{Binding ElementName=XXXAxis}" 
+                       YAxis="{Binding ElementName=WorkerAblityYAxis}">
+                                </ig:LineSeries>
+                                <ig:LineSeries ItemsSource="{StaticResource WorkshopContractCollection}" ValueMemberPath="ProductAblityValue"  
+                       Title="ProductAblityValue" MarkerType="None" Thickness="3"
+                       XAxis="{Binding ElementName=XXXAxis}" 
+                       YAxis="{Binding ElementName=ProductAblityYAxis}">
+                                </ig:LineSeries>
+                            </ig:XamDataChart.Series>
+                        </ig:XamDataChart>
+                        
+                    </Canvas>
+                </TabItem>
             </TabControl>
         </DockPanel>
         <DockPanel Grid.Row="2">

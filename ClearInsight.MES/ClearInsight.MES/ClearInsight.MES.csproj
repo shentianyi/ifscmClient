@@ -86,6 +86,7 @@
     <Compile Include="ViewModel\ContractRecord.cs" />
     <Compile Include="ViewModel\EntityBase.cs" />
     <Compile Include="ViewModel\Contract.cs" />
+    <Compile Include="ViewModel\HumanResouce.cs" />
     <Compile Include="ViewModel\Product.cs" />
     <Compile Include="ViewModel\Schedule.cs" />
     <Compile Include="ViewModel\ScheduleFailCollection.cs" />

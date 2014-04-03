@@ -1,4 +1,5 @@
-Infragistics.Controls.Editors.XamCalendar, InfragisticsWPF4.Controls.Editors.XamCalendar.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
-Infragistics.Controls.Charts.XamDataChart, InfragisticsWPF4.Controls.Charts.XamDataChart.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
+Infragistics.Controls.Charts.XamPieChart, InfragisticsWPF4.Controls.Charts.XamDataChart.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
 Infragistics.Controls.Timelines.XamTimeline, InfragisticsWPF4.Controls.Timelines.XamTimeline.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
+Infragistics.Controls.Charts.XamDataChart, InfragisticsWPF4.Controls.Charts.XamDataChart.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
+Infragistics.Controls.Editors.XamCalendar, InfragisticsWPF4.Controls.Editors.XamCalendar.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
 Infragistics.Controls.Barcodes.XamEanUpcBarcode, InfragisticsWPF4.Controls.Barcodes.v13.2, Version=13.2.20132.2096, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
