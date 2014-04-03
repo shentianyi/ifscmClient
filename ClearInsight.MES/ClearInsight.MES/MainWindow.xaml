@@ -133,28 +133,28 @@
                          VerticalZoomable="False" VerticalZoombarVisibility="Collapsed"
                                      Width="Auto"   Height="489" >
                         <ig:XamDataChart.Resources>
-                            <models:WorkshopPlanCollection x:Key="WorkshopPlanCollection" />
+                            <models:WorkshopContractCollection x:Key="WorkshopContractCollection" />
                         </ig:XamDataChart.Resources>
                         <ig:XamDataChart.Axes>
                             <ig:NumericYAxis x:Name="YAxis" MinimumValue="0" Interval="10" Label="{}{} TT" />
-                            <ig:CategoryXAxis x:Name="XAxis" ItemsSource="{StaticResource WorkshopPlanCollection}" Label="{}{Date}" />
+                            <ig:CategoryXAxis x:Name="XAxis" ItemsSource="{StaticResource WorkshopContractCollection}" Label="{}{Date}" />
                         </ig:XamDataChart.Axes>
                         <ig:XamDataChart.Series> 
                             <ig:StackedColumnSeries XAxis="{Binding ElementName=XAxis}" 
-                                YAxis="{Binding ElementName=YAxis}" 
-                                ItemsSource="{StaticResource WorkshopPlanCollection}">
+                                YAxis="{Binding ElementName=YAxis}"  
+                                ItemsSource="{StaticResource WorkshopContractCollection}" MouseLeftButtonUp="StackedColumnSeries_MouseLeftButtonUp">
                                 <ig:StackedColumnSeries.Series>
                                     <ig:StackedFragmentSeries ValueMemberPath="OriValue" Title="OriValue" />
                                     <ig:StackedFragmentSeries ValueMemberPath="MoveupValue" Title="MoveupValue" />
                                     <ig:StackedFragmentSeries ValueMemberPath="MovedownValue" Title="MovedownValue" /> 
                                 </ig:StackedColumnSeries.Series>
                             </ig:StackedColumnSeries>
-                            <ig:LineSeries ItemsSource="{StaticResource WorkshopPlanCollection}" ValueMemberPath="ContractValue"  
+                            <ig:LineSeries ItemsSource="{StaticResource WorkshopContractCollection}" ValueMemberPath="ContractValue"  
                        Title="ContractValue" MarkerType="None" Thickness="3"
                        XAxis="{Binding ElementName=XAxis}" 
                        YAxis="{Binding ElementName=YAxis}">
                             </ig:LineSeries>
-                            <ig:LineSeries ItemsSource="{StaticResource WorkshopPlanCollection}" ValueMemberPath="PredictValue"  
+                            <ig:LineSeries ItemsSource="{StaticResource WorkshopContractCollection}" ValueMemberPath="PredictValue"  
                        Title="PredictValue" MarkerType="None" Thickness="3"
                        XAxis="{Binding ElementName=XAxis}" 
                        YAxis="{Binding ElementName=YAxis}">

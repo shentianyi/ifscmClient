@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ClearInsight.MES.ViewModel;
 using Infragistics;
+using Infragistics.Controls.Charts;
 
 
 namespace ClearInsight.MES
@@ -54,6 +55,13 @@ namespace ClearInsight.MES
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new ScheduleAnalyse().ShowDialog();
+        }
+
+      
+
+        private void StackedColumnSeries_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             new ContractDetail().ShowDialog();
         }

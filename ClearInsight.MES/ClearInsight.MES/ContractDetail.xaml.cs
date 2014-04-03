@@ -34,6 +34,10 @@ namespace ClearInsight.MES
                 StateL.Content = contract.State;
                 ArrangeStaffL.Content = contract.ArrangeStaff;
                 TimeL.Content = contract.Time;
+
+                // load detail
+                ContractDG.ItemsSource = ContractProduct.GetSource();
+                
                 OnSampleLoaded(sender,e);
             }
         }
@@ -51,7 +55,6 @@ namespace ClearInsight.MES
             series.Entries.Add(new DateTimeEntry { Time = time.AddHours(r.Next(10, 30)), Title = "推单:2W" }); 
             series.Entries.Add(new DateTimeEntry { Time = time.AddHours(r.Next(10, 30)).AddMinutes(15), Title = "提单:5W" });
             this.timeline.Series.Add(series); 
- 
         }
     }
 }

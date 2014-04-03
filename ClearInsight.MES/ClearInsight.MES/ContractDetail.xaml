@@ -16,7 +16,7 @@
             <StackPanel Orientation="Horizontal">
             <StackPanel Width="98">
                     <Label Content="合 同"/>
-                    <ListBox Name="ContractLB" AllowDrop="True" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="ContractLB_SelectionChanged">
+                    <ListBox Name="ContractLB" Height="490" AllowDrop="True" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="ContractLB_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Vertical"> 
@@ -56,15 +56,32 @@
                                     <Label Name="ArrangeStaffL" />
                                 </StackPanel>
                             </StackPanel>
-                        <StackPanel Grid.Row="1" Height="200">
-                           <DataGrid />
-                        </StackPanel>
+                         
+                            <DataGrid Name="ContractDG" Background="WhiteSmoke" IsReadOnly="True" SelectedIndex="-1" Grid.Row="1"
+                                      CanUserAddRows="False" CanUserDeleteRows="False" ScrollViewer.CanContentScroll="True" Height="180"
+                                      ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                      ClipboardCopyMode="IncludeHeader" AutoGenerateColumns="False">
+                                <DataGrid.ColumnHeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="Foreground" Value="black"/>
+                                        <Setter Property="FontSize" Value="14" />
+                                        <Setter Property="Padding" Value="10,10,10,10"/>
+                                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="产品类型" Binding="{Binding Path=Nr}"  />
+                                    <DataGridTextColumn Header="数量" Binding="{Binding Path=Value}"  />
+                                    <DataGridTextColumn Header="单位" Binding="{Binding Path=Unit}"  /> 
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        
                         <StackPanel Grid.Row="2"   >
 
                             <!--#BEGIN SNIPPET#-->
                             <ig:XamTimeline x:Name="timeline" Width="716"  Height="254" Margin="0,10,0,0">
                                 <ig:XamTimeline.Axis>
-                                    <ig:DateTimeAxis ShowThumb="False" ScrollScale=".60" />
+                                    <ig:DateTimeAxis ShowThumb="False" />
                                 </ig:XamTimeline.Axis>
                             </ig:XamTimeline>
                             <!--#END SNIPPET#-->

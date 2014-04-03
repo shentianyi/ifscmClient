@@ -1,0 +1,104 @@
+﻿<Window x:Class="ClearInsight.MES.ScheduleAnalyse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ScheduleAnalyse"  Height="650" Width="900"
+          xmlns:System="clr-namespace:System;assembly=mscorlib"
+         xmlns:models="clr-namespace:ClearInsight.MES.ViewModel" xmlns:ig="http://schemas.infragistics.com/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="252*" />
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Frame Source="Header.xaml" DockPanel.Dock="Left" NavigationUIVisibility="Hidden"/>
+        </DockPanel>
+        <DockPanel Grid.Row="1">
+            <Button Width="100" Content="发起改进" HorizontalAlignment="Right" Margin="0,0,20,0" Click="Button_Click" />
+        </DockPanel>
+        <DockPanel Grid.Row="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="92*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal">
+                    <StackPanel></StackPanel>
+                    <StackPanel Orientation="Horizontal"></StackPanel>
+                    <StackPanel Orientation="Horizontal"></StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="开始时间" FontSize="15"/>
+                        <DatePicker x:Name="StartDP" Width="150" Height="25"  SelectedDateFormat="Short"
+                                   FirstDayOfWeek="Monday">
+                        </DatePicker>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="结束时间" FontSize="15"/>
+                        <DatePicker x:Name="EndDP" Width="150" Height="25"   SelectedDate="{x:Static System:DateTime.Now}" 
+                                    SelectedDateFormat="Short" FirstDayOfWeek="Monday">
+                        </DatePicker>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal" Width="878">
+                    <ig:XamDataChart x:Name="DataChart" Padding="0" Visibility="Visible"
+                         HorizontalZoomable="False" HorizontalZoombarVisibility="Collapsed"
+                         VerticalZoomable="False" VerticalZoombarVisibility="Collapsed" Margin="0,20,0,0"
+                                     Width="637"   Height="317" >
+                        <ig:XamDataChart.Resources>
+                            <models:ScheduleFailCollection x:Key="ScheduleFailCollection" />
+                        </ig:XamDataChart.Resources>
+                        <ig:XamDataChart.Axes>
+
+                            <ig:NumericYAxis x:Name="ContractAmountYAxis"  Label="{} {} H">
+                                <ig:NumericYAxis.LabelSettings>
+                                    <ig:AxisLabelSettings Location="OutsideLeft" Extent="55" Visibility="Visible"/>
+                                </ig:NumericYAxis.LabelSettings>
+                            </ig:NumericYAxis>
+                            <ig:NumericYAxis x:Name="ProductAmountYAxis"  Label="{} {} TT">
+                                <ig:NumericYAxis.LabelSettings>
+                                    <ig:AxisLabelSettings Location="OutsideRight" Extent="55" Visibility="Visible" />
+                                </ig:NumericYAxis.LabelSettings>
+                            </ig:NumericYAxis>
+                            <ig:CategoryXAxis x:Name="XAxis" ItemsSource="{StaticResource ScheduleFailCollection}" Label="{}{Date}" />
+                        </ig:XamDataChart.Axes>
+                        <ig:XamDataChart.Series>
+                            <ig:LineSeries ItemsSource="{StaticResource ScheduleFailCollection}" ValueMemberPath="ContractAmount"  
+                       Title="ContractAmount" MarkerType="None" Thickness="3"
+                       XAxis="{Binding ElementName=XAxis}" 
+                       YAxis="{Binding ElementName=ContractAmountYAxis}">
+                            </ig:LineSeries>
+                            <ig:LineSeries ItemsSource="{StaticResource ScheduleFailCollection}" ValueMemberPath="ProductAmount"  
+                       Title="ProductAmount" MarkerType="None" Thickness="3"
+                       XAxis="{Binding ElementName=XAxis}" 
+                       YAxis="{Binding ElementName=ProductAmountYAxis}">
+                            </ig:LineSeries>
+                        </ig:XamDataChart.Series>
+                    </ig:XamDataChart>
+                    <DataGrid Name="ScheduleDG" Background="WhiteSmoke" IsReadOnly="True" SelectedIndex="-1"  
+                                      CanUserAddRows="False" CanUserDeleteRows="False" ScrollViewer.CanContentScroll="True" Height="292"
+                                      ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                      ClipboardCopyMode="IncludeHeader" AutoGenerateColumns="False" Width="232">
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Foreground" Value="black"/>
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="Padding" Value="10,10,10,10"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="时间" Binding="{Binding Path=Date}"  />
+                            <DataGridTextColumn Header="次数" Binding="{Binding Path=ContractAmount}"  />
+                            <DataGridTextColumn Header="总量" Binding="{Binding Path=ProductAmount}"  />
+                            <DataGridTextColumn Header="原因" Binding="{Binding Path=Reason}"  />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Grid>
+        </DockPanel>
+<DockPanel Grid.Row="3">
+            <Frame Source="Footer.xaml" DockPanel.Dock="Left" NavigationUIVisibility="Hidden"/>
+        </DockPanel>
+    </Grid>
+</Window>

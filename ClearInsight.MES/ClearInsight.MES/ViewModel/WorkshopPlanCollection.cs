@@ -6,9 +6,9 @@ using System.Collections.ObjectModel;
 
 namespace ClearInsight.MES.ViewModel
 {
-    public class WorkshopPlanCollection : ObservableCollection<WorkshopContract>
+    public class WorkshopContractCollection : ObservableCollection<WorkshopContract>
     {
-        public WorkshopPlanCollection()
+        public WorkshopContractCollection()
         {
             DateTime StartDate = DateTime.Now.AddDays(-7), EndDate = DateTime.Now.AddDays(4);
             Random r = new Random();

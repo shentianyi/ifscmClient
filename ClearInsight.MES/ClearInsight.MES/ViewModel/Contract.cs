@@ -17,6 +17,7 @@ namespace ClearInsight.MES.ViewModel
         public string Time { get; set; }
         public string Type { get; set; }
         private static string[] status = new string[3] { "首次排单", "提单", "推单" };
+
         public static List<Contract> GetSource()
         {
             List<Contract> contracts = new List<Contract>();
@@ -37,7 +38,6 @@ namespace ClearInsight.MES.ViewModel
             return contracts;
         }
     }
-
     public class WorkshopContract
     {
         public Workshop Workshop { get; set; }
@@ -48,7 +48,4 @@ namespace ClearInsight.MES.ViewModel
         public string ContractValue { get; set; }
         public string PredictValue { get; set; }
     }
-
-  
-
 }
