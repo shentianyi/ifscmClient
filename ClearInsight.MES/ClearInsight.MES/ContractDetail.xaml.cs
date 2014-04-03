@@ -51,9 +51,9 @@ namespace ClearInsight.MES
             Random r = new Random();
             DateTime time = DateTime.Today;
             series.Entries.Add(new DateTimeEntry { Time = time.AddHours(r.Next(10, 30)),  Title = "首次排单：30W" });
-            series.Entries.Add(new DateTimeEntry { Time = time.AddHours(r.Next(10, 30)),  Title = "推单:3.5W" });
-            series.Entries.Add(new DateTimeEntry { Time = time.AddHours(r.Next(10, 30)), Title = "推单:2W" }); 
-            series.Entries.Add(new DateTimeEntry { Time = time.AddHours(r.Next(10, 30)).AddMinutes(15), Title = "提单:5W" });
+            series.Entries.Add(new DateTimeEntry { Time = time.AddHours(r.Next(10, 30)), Title = "推单:3.5W 至" + time.AddDays(r.Next(0, 3)).ToString("MM/dd") });
+            series.Entries.Add(new DateTimeEntry { Time = time.AddHours(r.Next(10, 30)), Title = "推单:2W 至"+time.AddDays(r.Next(0,3)).ToString("MM/dd") }); 
+            series.Entries.Add(new DateTimeEntry { Time = time.AddHours(r.Next(10, 30)).AddMinutes(15), Title = "提单:5W 来自"+time.AddDays(r.Next(0,3)).ToString("MM/dd") });
             this.timeline.Series.Add(series); 
         }
     }
