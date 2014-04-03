@@ -16,7 +16,7 @@
             <StackPanel Orientation="Horizontal">
             <StackPanel Width="98">
                     <Label Content="合 同"/>
-                    <ListBox Name="ContractLB" Height="490" AllowDrop="True" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="ContractLB_SelectionChanged">
+                    <ListBox Name="ContractLB" Height="490" AllowDrop="True" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="ContractLB_SelectionChanged" Width="98">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Vertical"> 

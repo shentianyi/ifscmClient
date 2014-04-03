@@ -27,6 +27,7 @@ namespace ClearInsight.MES
 
         private void init()
         {
+            ContractDG.ItemsSource = ContractProduct.GetSource();
             BranchFactoryCB.ItemsSource = BranchFactory.GetSource();
             WorkshopCB.ItemsSource = Workshop.GetSource((int)BranchFactoryCB.SelectedValue);
            
@@ -41,6 +42,11 @@ namespace ClearInsight.MES
         {
             WorkshopCB.ItemsSource = Workshop.GetSource((int)BranchFactoryCB.SelectedValue);
             WorkshopCB.SelectedIndex = 0;
+        }
+
+        private void PublishBT_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("发布成功！");
         }
     }
 }

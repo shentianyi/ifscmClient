@@ -126,12 +126,11 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"></StackPanel>
                 </StackPanel> 
-                    <DockPanel Grid.Row="1" HorizontalAlignment="Left" Width="1043">
-                    <StackPanel>
+                    <Canvas Grid.Row="1" HorizontalAlignment="Left" Width="1043" >
                         <ig:XamDataChart x:Name="DataChart" Padding="0" Visibility="Visible"
-                         HorizontalZoomable="False" HorizontalZoombarVisibility="Collapsed"
+                         HorizontalZoomable="False" HorizontalZoombarVisibility="Collapsed" Margin="10,40,10,10"
                          VerticalZoomable="False" VerticalZoombarVisibility="Collapsed"
-                                     Width="956"   Height="489" >
+                                     Width="670"   Height="438" >
                         <ig:XamDataChart.Resources>
                             <models:WorkshopContractCollection x:Key="WorkshopContractCollection" />
                         </ig:XamDataChart.Resources>
@@ -151,13 +150,28 @@
                             </ig:StackedColumnSeries>
                         </ig:XamDataChart.Series>
                     </ig:XamDataChart>
-                    </StackPanel>
-                    <StackPanel>
-                        <Button Content="查看占用" Name="ShowContractDetailBT" Height="51" Width="83" Click="ShowContractDetailBT_Click" />
-                        <Button Content="试排入" Name="PrePublishBT" Height="51" Width="83" />
-                        <Button Content="发布" Name="PublishBT" Height="51" Width="83" />
-                    </StackPanel>
-                </DockPanel>
+                    <DataGrid Name="ContractDG" Background="WhiteSmoke" IsReadOnly="True" SelectedIndex="-1" Grid.Row="1"
+                                      CanUserAddRows="False" CanUserDeleteRows="False" ScrollViewer.CanContentScroll="True" Height="364"
+                                      ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                      ClipboardCopyMode="IncludeHeader" AutoGenerateColumns="False" Canvas.Left="715" Canvas.Top="48" Width="274">
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Foreground" Value="black"/>
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="Padding" Value="10,10,10,10"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="产品类型" Binding="{Binding Path=Nr}"  />
+                            <DataGridTextColumn Header="数量" Binding="{Binding Path=Value}"  />
+                            <DataGridTextColumn Header="单位" Binding="{Binding Path=Unit}"  />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="查看占用" Name="ShowContractDetailBT" Height="51" Width="83" Click="ShowContractDetailBT_Click" Canvas.Left="920" Canvas.Top="418" />
+                        <Button Content="试排入" Name="PrePublishBT" Height="51" Width="83" Canvas.Left="814" Canvas.Top="418" />
+                        <Button Content="发布" Name="PublishBT" Height="51" Width="83" Canvas.Left="707" Canvas.Top="418" Click="PublishBT_Click" />
+                </Canvas>
                 
             </Grid>
         </DockPanel>

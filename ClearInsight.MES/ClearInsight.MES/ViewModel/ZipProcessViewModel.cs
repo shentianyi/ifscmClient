@@ -25,7 +25,7 @@ namespace ClearInsight.MES.ViewModel
             {
                 return null;
             }
-            if (name == "拉头库存")
+            if (name == "拉头(库存)")
             {
                 return new List<ZipProcessDetail>() { new ZipProcessDetail() { Value = 1000, Type = ZipProcessDetailType.Number } };
             }

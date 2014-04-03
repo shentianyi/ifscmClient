@@ -251,38 +251,42 @@
                                     <ColumnDefinition Width="1*" />
                                     <ColumnDefinition Width="1*" />
                                 </Grid.ColumnDefinitions>
-                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="0" Grid.Row="0" Background="Green" Content="生产中" />
-                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="1"  Grid.Row="0" Background="Green" Content="生产中" />
-                                <Button   Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="2" Grid.Row="0" Background="Green" Content="生产中" />
+                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="0" Grid.Row="0" Background="Green" >
+                                    <Button.Content>
+                                        <TextBlock Text="自动01 ： 生产中"/> 
+                                    </Button.Content>
+                                </Button>
+
+                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="1"  Grid.Row="0" Background="Green" Content="自动06 ： 生产中" />
+                                <Button   Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="2" Grid.Row="0" Background="Green" Content="手动01 ： 生产中" />
                                 <Button   Height="72" HorizontalAlignment="Left" Background="Red" Content="不在线" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="3"  Grid.Row="0"/>
                                 <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="4" Grid.Row="0" Background="Green" Content="生产中" />
 
-                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="0" Grid.Row="1" Background="Green" Content="生产中" />
-                                <Button  Height="72" HorizontalAlignment="Left" Background="Red" Content="不在线" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="1"  Grid.Row="1"/>
+                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="0" Grid.Row="1" Background="Green" Content="自动02 ： 生产中" />
+                                <Button  Height="72" HorizontalAlignment="Left" Background="Red" Content="自动07 ： 不在线" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="1"  Grid.Row="1"/>
                                 <Button   Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="2" Grid.Row="1" Background="Green" Content="生产中" />
                                 <Button   Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="3"  Grid.Row="1" Background="Green" Content="生产中" />
                                 <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="4" Grid.Row="1" Background="Green" Content="生产中" />
 
-                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="0" Grid.Row="2" Background="Green" Content="生产中" />
-                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="1"  Grid.Row="2" Background="Green" Content="生产中" />
+                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="0" Grid.Row="2" Background="Green" Content="自动03 ： 生产中" />
+                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="1"  Grid.Row="2" Background="Green" Content="自动08 ： 生产中" />
                                 <Button   Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="2" Grid.Row="2" Background="Green" Content="生产中"  />
                                 <Button   Height="72" HorizontalAlignment="Left" Margin="22,7,0,0" Background="Red" Content="不在线" VerticalAlignment="Top" Width="107" Grid.Column="3"  Grid.Row="2"/>
                                 <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="4" Grid.Row="2" Background="Green" Content="生产中" />
 
 
-                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="0" Grid.Row="3" Background="Green" Content="生产中" />
-                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="1"  Grid.Row="3" Background="Green" Content="生产中" />
+                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="0" Grid.Row="3" Background="Green" Content="自动04 ： 生产中" />
+                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="1"  Grid.Row="3" Background="Green" Content="自动09 ： 生产中" />
                                 <Button   Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="2" Grid.Row="3" Background="Green" Content="生产中" />
                                 <Button   Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="3"  Grid.Row="3" Background="Green" Content="生产中" />
                                 <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0" Background="Yellow" Content="等待"  VerticalAlignment="Top" Width="107" Grid.Column="4" Grid.Row="3"/>
 
 
-                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0" Background="Yellow" Content="等待"  VerticalAlignment="Top" Width="107" Grid.Column="0" Grid.Row="4"/>
-                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="1"  Grid.Row="4" Background="Green" Content="生产中" />
+                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0" Background="Yellow" Content="自动05 ： 等待"  VerticalAlignment="Top" Width="107" Grid.Column="0" Grid.Row="4"/>
+                                <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="1"  Grid.Row="4" Background="Green" Content="自动10 ： 生产中" />
                                 <Button   Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="2" Grid.Row="4" Background="Green" Content="生产中" />
                                 <Button   Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="3"  Grid.Row="4" Background="Green" Content="生产中" />
                                 <Button  Height="72" HorizontalAlignment="Left" Margin="22,7,0,0"  VerticalAlignment="Top" Width="107" Grid.Column="4" Grid.Row="4" Background="Green" Content="生产中" />
-                                <Label Content="Label" Grid.Row="5" Height="41" HorizontalAlignment="Left" Margin="64,22,0,0" Name="label3" VerticalAlignment="Top" />
                             </Grid>
                             <StackPanel HorizontalAlignment="Left" >
                                 <Label Content="总OEE"   />
