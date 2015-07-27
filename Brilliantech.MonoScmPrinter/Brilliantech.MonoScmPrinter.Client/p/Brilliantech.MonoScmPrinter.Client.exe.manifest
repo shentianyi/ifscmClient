@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
-  <asmv1:assemblyIdentity name="Brilliantech.MonoScmPrinter.Client.exe" version="1.0.0.11" publicKeyToken="0000000000000000" language="zh-CN" processorArchitecture="msil" type="win32" />
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Brilliantech.MonoScmPrinter.Client.exe" version="1.0.0.12" publicKeyToken="0000000000000000" language="zh-CN" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="headicon.ico" asmv2:publisher="Brilliantech" co.v1:suiteName="SCM Client Printer" asmv2:product="SCMClient" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -63,7 +63,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vBfSQLBwnijTN4eWn0g5WaSC4JY=</dsig:DigestValue>
+        <dsig:DigestValue>jWupPLdclbcuTkB9ticHymPtc64=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,7 +75,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/rpi685SkehWM7puU8B6ChevGd0=</dsig:DigestValue>
+        <dsig:DigestValue>5B3uVCW/Nnf23ue0nGKGUTlibz4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,7 +87,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>rPv50bM5XJsbCZ6yHKwCHWcvwS0=</dsig:DigestValue>
+        <dsig:DigestValue>6itnlmmCCVEvHw/vlPQUsd9aU8U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -99,7 +99,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>BfmC3d3nU2ocrbdjazKx1BynQrQ=</dsig:DigestValue>
+        <dsig:DigestValue>Lb0ZMNJC1ZDgYA/al1c3ciWJrCw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -172,13 +172,13 @@
       <dsig:DigestValue>1MarUy3RuVvHLdw5ozZo3o7j39I=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Config\baseConfig.ini" size="560">
+  <file name="Config\baseConfig.ini" size="557">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>NO2GTS4/ijhMVKwK7/ujplpHvWs=</dsig:DigestValue>
+      <dsig:DigestValue>J9MKC9+ekiVfE5XqsmrIZ9DWsTE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Config\settingConfig.ini" size="136">
